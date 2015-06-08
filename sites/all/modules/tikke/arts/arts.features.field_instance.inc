@@ -96,7 +96,6 @@ function arts_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
-      'entity_translation_sync' => FALSE,
       'file_directory' => 'art_galleries',
       'file_extensions' => 'png gif jpg jpeg',
       'filefield_paths' => array(
@@ -130,14 +129,13 @@ function arts_field_default_field_instances() {
       'settings' => array(
         'allow_replace' => 0,
         'droppable_area_text' => 'Drop files here to upload',
-        'file_entity_inline' => 1,
-        'file_entity_inline_fields' => array(),
-        'multiupload' => 0,
+        'media_browser' => 0,
+        'multiupload' => 1,
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'bar',
         'standard_upload' => 1,
         'upload_button_text' => 'העלאה',
-        'upload_event' => 'manual',
+        'upload_event' => 'auto',
       ),
       'type' => 'dragndrop_upload_image',
       'weight' => 7,
@@ -475,7 +473,6 @@ function arts_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
-      'entity_translation_sync' => FALSE,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'filefield_paths' => array(
@@ -509,9 +506,8 @@ function arts_field_default_field_instances() {
       'settings' => array(
         'allow_replace' => 0,
         'droppable_area_text' => 'Drop files here to upload',
-        'file_entity_inline' => 1,
-        'file_entity_inline_fields' => array(),
-        'multiupload' => 0,
+        'media_browser' => 0,
+        'multiupload' => 1,
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
         'standard_upload' => 1,
