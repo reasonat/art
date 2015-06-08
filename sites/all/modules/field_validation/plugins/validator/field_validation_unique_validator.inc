@@ -40,7 +40,7 @@ class field_validation_unique_validator extends field_validation_validator {
         $query->entityCondition('entity_type', $this->rule->entity_type);
         $query->entityCondition('bundle', $this->rule->bundle);
       }
-
+ 
       list($id, $vid, $bundle) = entity_extract_ids($this->rule->entity_type, $this->entity);
       if ($this->rule->entity_type == 'user' && arg(0) =='user' && arg(2) =='edit' && empty($id)) {
         $id = arg(1);
@@ -68,6 +68,11 @@ class field_validation_unique_validator extends field_validation_validator {
       //Always bypass all access checkings.
       $query->addMetaData('account', user_load(1));
       $query->fieldCondition($this->rule->field_name, $this->rule->col, $this->value);
+
+      // Do the check per language
+      if (isset($this->rule->settings['per_language']) && $this->rule->settings['per_language'] && $scope != 'global') {
+        $query->propertyCondition('language', $this->entity->language, '=');
+      }
 
       // Do the check per user
       if (isset($this->rule->settings['per_user']) && $this->rule->settings['per_user'] && $scope != 'global') {
@@ -140,6 +145,14 @@ class field_validation_unique_validator extends field_validation_validator {
         'bundle' => t('Bundle'),
       ),
       '#default_value' => isset($default_settings['data']) ? $default_settings['data'] : '',
+    );
+    $form['settings']['per_language'] = array(
+      '#title' => t('Per language'),
+      '#type' => 'checkbox',
+      '#default_value' => isset($default_settings['per_language']) ? $default_settings['per_language'] : '',
+      '#states' => array(
+        'invisible' => array(':input[name="settings[data]"]' => array('value' => 'global')),
+      ),
     );
     $form['settings']['per_user'] = array(
       '#title' => t('Per user'),

@@ -31,6 +31,11 @@ class property_validation_unique_validator extends property_validation_validator
         $query->entityCondition('bundle', $this->rule->bundle);
       }
 
+      // Do the check per language
+      if (isset($this->rule->settings['per_language']) && $this->rule->settings['per_language'] && $scope != 'global') {
+        $query->propertyCondition('language', $this->entity->language, '=');
+      }
+
       list($id, $vid, $bundle) = entity_extract_ids($this->rule->entity_type, $this->entity);
       if ($this->rule->entity_type == 'user' && arg(0) =='user' && arg(2) =='edit' && empty($id)) {
         $id = arg(1);
@@ -72,6 +77,14 @@ class property_validation_unique_validator extends property_validation_validator
         'bundle' => t('Bundle'),
       ),  
       '#default_value' => isset($default_settings['data']) ? $default_settings['data'] : '',
+    );
+    $form['settings']['per_language'] = array(
+      '#title' => t('Per language'),
+      '#type' => 'checkbox',
+      '#default_value' => isset($default_settings['per_language']) ? $default_settings['per_language'] : '',
+      '#states' => array(
+        'invisible' => array(':input[name="settings[data]"]' => array('value' => 'global')),
+      ),
     );
     parent::settings_form($form, $form_state);
   }
