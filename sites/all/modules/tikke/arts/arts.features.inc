@@ -11,52 +11,9 @@ function arts_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "field_group" && $api == "field_group") {
     return array("version" => "1");
   }
-  if ($module == "field_validation" && $api == "default_field_validation_rules") {
-    return array("version" => "2");
-  }
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
-}
-
-/**
- * Implements hook_eck_bundle_info().
- */
-function arts_eck_bundle_info() {
-  $items = array(
-    'artist_artist' => array(
-      'machine_name' => 'artist_artist',
-      'entity_type' => 'artist',
-      'name' => 'artist',
-      'label' => 'artist',
-    ),
-  );
-  return $items;
-}
-
-/**
- * Implements hook_eck_entity_type_info().
- */
-function arts_eck_entity_type_info() {
-  $items = array(
-    'artist' => array(
-      'name' => 'artist',
-      'label' => 'artist',
-      'properties' => array(
-        'title' => array(
-          'label' => 'Title',
-          'type' => 'text',
-          'behavior' => 'title',
-        ),
-        'language' => array(
-          'label' => 'Entity language',
-          'type' => 'language',
-          'behavior' => 'language',
-        ),
-      ),
-    ),
-  );
-  return $items;
 }
 
 /**

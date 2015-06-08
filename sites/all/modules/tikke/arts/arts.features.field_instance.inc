@@ -10,46 +10,6 @@
 function arts_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'artist-artist-field_artist_details'
-  $field_instances['artist-artist-field_artist_details'] = array(
-    'bundle' => 'artist',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'artist',
-    'field_name' => 'field_artist_details',
-    'label' => 'פרטים כלליים אודות האמן',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 5,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 1,
-    ),
-  );
-
   // Exported field_instance: 'node-art-field_art_date'
   $field_instances['node-art-field_art_date'] = array(
     'bundle' => 'art',
@@ -86,6 +46,7 @@ function arts_field_default_field_instances() {
       'default_value2' => 'same',
       'default_value_code' => '',
       'default_value_code2' => '',
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -101,7 +62,7 @@ function arts_field_default_field_instances() {
         'year_range' => '-150:+0',
       ),
       'type' => 'date_select',
-      'weight' => 11,
+      'weight' => 8,
     ),
   );
 
@@ -135,6 +96,7 @@ function arts_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
+      'entity_translation_sync' => FALSE,
       'file_directory' => 'art_galleries',
       'file_extensions' => 'png gif jpg jpeg',
       'filefield_paths' => array(
@@ -164,14 +126,20 @@ function arts_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'multiupload_imagefield_widget',
+      'module' => 'dragndrop_upload_image',
       'settings' => array(
+        'allow_replace' => 0,
+        'droppable_area_text' => 'Drop files here to upload',
         'file_entity_inline' => 1,
         'file_entity_inline_fields' => array(),
+        'multiupload' => 0,
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'bar',
+        'standard_upload' => 1,
+        'upload_button_text' => 'העלאה',
+        'upload_event' => 'manual',
       ),
-      'type' => 'image_miw',
+      'type' => 'dragndrop_upload_image',
       'weight' => 7,
     ),
   );
@@ -202,6 +170,7 @@ function arts_field_default_field_instances() {
     'label' => 'מיקום היצירה',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -209,7 +178,50 @@ function arts_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 28,
+      'weight' => 40,
+    ),
+  );
+
+  // Exported field_instance: 'node-art-field_art_location_text'
+  $field_instances['node-art-field_art_location_text'] = array(
+    'bundle' => 'art',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 15,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_art_location_text',
+    'label' => 'איפה היצירה נמצאת? ',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'maxlength_js' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 41,
     ),
   );
 
@@ -239,6 +251,7 @@ function arts_field_default_field_instances() {
     'label' => 'סגנון היצירה',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -253,7 +266,7 @@ function arts_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 27,
+      'weight' => 39,
     ),
   );
 
@@ -283,6 +296,7 @@ function arts_field_default_field_instances() {
     'label' => 'סוג היצירה',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -294,12 +308,12 @@ function arts_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 26,
+      'weight' => 35,
     ),
   );
 
-  // Exported field_instance: 'node-art-field_artist'
-  $field_instances['node-art-field_artist'] = array(
+  // Exported field_instance: 'node-art-field_artis'
+  $field_instances['node-art-field_artis'] = array(
     'bundle' => 'art',
     'deleted' => 0,
     'description' => '',
@@ -311,7 +325,7 @@ function arts_field_default_field_instances() {
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 2,
+        'weight' => 18,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -321,8 +335,8 @@ function arts_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_artist',
-    'label' => 'אומן',
+    'field_name' => 'field_artis',
+    'label' => 'אומן היצירה',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -334,15 +348,15 @@ function arts_field_default_field_instances() {
         'fields' => array(),
         'type_settings' => array(
           'allow_existing' => 1,
-          'delete_references' => 1,
-          'label_plural' => 'entities',
-          'label_singular' => 'entity',
+          'delete_references' => 0,
+          'label_plural' => 'nodes',
+          'label_singular' => 'פריט תוכן',
           'match_operator' => 'CONTAINS',
           'override_labels' => 0,
         ),
       ),
       'type' => 'inline_entity_form',
-      'weight' => 12,
+      'weight' => 3,
     ),
   );
 
@@ -372,6 +386,7 @@ function arts_field_default_field_instances() {
     'label' => 'קמפוס ',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -379,7 +394,7 @@ function arts_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 10,
+      'weight' => 7,
     ),
   );
 
@@ -414,6 +429,7 @@ function arts_field_default_field_instances() {
     'label' => 'מספר קטלוג',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max' => '',
       'min' => '',
       'prefix' => '',
@@ -425,7 +441,7 @@ function arts_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 9,
+      'weight' => 6,
     ),
   );
 
@@ -459,6 +475,7 @@ function arts_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
+      'entity_translation_sync' => FALSE,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'filefield_paths' => array(
@@ -488,14 +505,20 @@ function arts_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'image',
+      'module' => 'dragndrop_upload_image',
       'settings' => array(
+        'allow_replace' => 0,
+        'droppable_area_text' => 'Drop files here to upload',
         'file_entity_inline' => 1,
         'file_entity_inline_fields' => array(),
+        'multiupload' => 0,
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
+        'standard_upload' => 1,
+        'upload_button_text' => 'העלאה',
+        'upload_event' => 'manual',
       ),
-      'type' => 'image_image',
+      'type' => 'dragndrop_upload_image',
       'weight' => 8,
     ),
   );
@@ -527,9 +550,10 @@ function arts_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_large_image_grid',
-    'label' => 'תצוגה רחבה בגריד הראשי',
+    'label' => 'תמונה גדולה',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -540,6 +564,82 @@ function arts_field_default_field_instances() {
       ),
       'type' => 'options_onoff',
       'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'node-art-field_material'
+  $field_instances['node-art-field_material'] = array(
+    'bundle' => 'art',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(),
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 17,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_material',
+    'label' => 'חומר',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 38,
+    ),
+  );
+
+  // Exported field_instance: 'node-art-field_measures'
+  $field_instances['node-art-field_measures'] = array(
+    'bundle' => 'art',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(),
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 16,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_measures',
+    'label' => 'מידות',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 36,
     ),
   );
 
@@ -569,6 +669,7 @@ function arts_field_default_field_instances() {
     'label' => 'תקציר',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -583,7 +684,7 @@ function arts_field_default_field_instances() {
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 23,
+      'weight' => 34,
     ),
   );
 
@@ -599,7 +700,7 @@ function arts_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 8,
+        'weight' => 19,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -620,27 +721,33 @@ function arts_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'rows' => 5,
+        'maxlength_js' => '',
+        'maxlength_js_enforce' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'maxlength_js_truncate_html' => 0,
+        'rows' => 10,
       ),
       'type' => 'text_textarea',
-      'weight' => 24,
+      'weight' => 36,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('אומן');
+  t('אומן היצירה');
+  t('איפה היצירה נמצאת? ');
   t('גלריית היצירה');
+  t('חומר');
+  t('מידות');
   t('מיקום היצירה');
   t('מספר קטלוג');
   t('סגנון היצירה');
   t('סוג היצירה');
-  t('פרטים כלליים אודות האמן');
   t('קמפוס ');
   t('שנת היצירה');
   t('תוכן היצירה');
+  t('תמונה גדולה');
   t('תמונות - גלריית גריד תחתונה');
-  t('תצוגה רחבה בגריד הראשי');
   t('תקציר');
 
   return $field_instances;
