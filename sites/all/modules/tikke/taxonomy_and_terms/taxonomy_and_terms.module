@@ -1,7 +1,5 @@
 <?php
 /**
  * @file
- * Code for the Taxonomy and terms feature.
+ * Drupal needs this blank file.
  */
-
-include_once 'taxonomy_and_terms.features.inc';
