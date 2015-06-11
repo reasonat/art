@@ -1,3 +1,0 @@
-// Remove "field_some_name" from node-type "some_ctype"
-  $instance = field_info_instance('node', 'field_some_name', 'some_ctype');
-  field_delete_instance($instance, FALSE);
