@@ -106,7 +106,7 @@ function arts_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'ראשי',
-    'weight' => '6',
+    'weight' => '5',
     'children' => array(
       0 => 'group_tags',
       1 => 'group_media',

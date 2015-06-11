@@ -42,7 +42,7 @@ function arts_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '2',
+          'weight' => '3',
         ),
         'xmlsitemap' => array(
           'weight' => '1',
