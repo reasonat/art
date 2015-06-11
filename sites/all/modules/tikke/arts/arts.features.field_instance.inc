@@ -94,7 +94,7 @@ function arts_field_default_field_instances() {
     'label' => 'גלריית היצירה',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
       'file_directory' => 'art_galleries',
       'file_extensions' => 'png gif jpg jpeg',
@@ -120,7 +120,7 @@ function arts_field_default_field_instances() {
       'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '',
-      'title_field' => 0,
+      'title_field' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -128,7 +128,7 @@ function arts_field_default_field_instances() {
       'module' => 'dragndrop_upload_image',
       'settings' => array(
         'allow_replace' => 0,
-        'droppable_area_text' => 'Drop files here to upload',
+        'droppable_area_text' => 'גרירת קבצים לאזור הזה',
         'media_browser' => 0,
         'multiupload' => 1,
         'preview_image_style' => 'thumbnail',
@@ -471,7 +471,7 @@ function arts_field_default_field_instances() {
     'label' => 'תמונות - גלריית גריד תחתונה',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
@@ -497,7 +497,7 @@ function arts_field_default_field_instances() {
       'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '',
-      'title_field' => 0,
+      'title_field' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -505,14 +505,14 @@ function arts_field_default_field_instances() {
       'module' => 'dragndrop_upload_image',
       'settings' => array(
         'allow_replace' => 0,
-        'droppable_area_text' => 'Drop files here to upload',
+        'droppable_area_text' => 'גרירת קבצים לאזור הזה',
         'media_browser' => 0,
         'multiupload' => 1,
         'preview_image_style' => 'thumbnail',
-        'progress_indicator' => 'throbber',
+        'progress_indicator' => 'bar',
         'standard_upload' => 1,
         'upload_button_text' => 'העלאה',
-        'upload_event' => 'manual',
+        'upload_event' => 'auto',
       ),
       'type' => 'dragndrop_upload_image',
       'weight' => 8,
