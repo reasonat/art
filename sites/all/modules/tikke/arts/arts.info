@@ -67,7 +67,6 @@ features[field_instance][] = node-art-field_large_image_grid
 features[field_instance][] = node-art-field_material
 features[field_instance][] = node-art-field_measures
 features[field_instance][] = node-art-field_teaser
-features[field_instance][] = node-art-field_test_fiels
 features[field_instance][] = node-art-field_text
 features[field_validation_rule][] = unic_catalog
 features[metatag][] = node:art
