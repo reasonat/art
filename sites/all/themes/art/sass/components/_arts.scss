@@ -1,3 +1,67 @@
 a {
 	@include links;
 }
+
+
+//Overall Changes to theme
+#header, #content, #navigation, .region-sidebar-first, .region-sidebar-second, #footer {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/* 
+ * HEADER THEME
+ ****************************************/
+
+// Logo
+.header__logo {
+  padding-top: 47px;
+}
+
+// the Header region 
+.header__region {
+	margin-right: 10.1%;
+	float: right;
+	clear: none !important;
+}
+
+// The language switcher blcok
+#block-lang-dropdown-language {
+	
+	padding-top: 47px;
+	h2 {
+		display: none;
+	}
+	.dd-selected {
+		padding: 6px;
+	}
+	.dd-select {
+		width: 78px !important;
+		height: 27px;
+		@include black_bt;
+		border-radius: 0;
+		a {
+			color: $white;
+		}
+		&:hover {
+			.dd-pointer , 
+			.dd-pointer-down {
+				border-color: $black rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+				border-width: 6px;
+			} 
+		}
+	}
+	.dd-pointer , 
+	.dd-pointer-down {
+		border-color: #fff rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) ;
+		right: 80%;
+	}
+
+}
+
+// The text resize block
+#block-textsize-form {
+	h2 {
+		display: none;
+	}
+}

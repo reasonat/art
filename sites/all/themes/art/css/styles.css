@@ -597,7 +597,7 @@ table {
 .region-bottom {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1200px;
+  max-width: 1280px;
 }
 
 /* Apply the shared properties of grid items in a single, efficient ruleset. */
@@ -1710,6 +1710,78 @@ a {
 /* line 43, ../sass/_mixins.scss */
 a:active, a:hover {
   color: #00A193;
+}
+
+/* line 7, ../sass/components/_arts.scss */
+#header, #content, #navigation, .region-sidebar-first, .region-sidebar-second, #footer {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/* 
+ * HEADER THEME
+ ****************************************/
+/* line 17, ../sass/components/_arts.scss */
+.header__logo {
+  padding-top: 47px;
+}
+
+/* line 22, ../sass/components/_arts.scss */
+.header__region {
+  margin-right: 10.1%;
+  float: right;
+  clear: none !important;
+}
+
+/* line 29, ../sass/components/_arts.scss */
+#block-lang-dropdown-language {
+  padding-top: 47px;
+}
+/* line 32, ../sass/components/_arts.scss */
+#block-lang-dropdown-language h2 {
+  display: none;
+}
+/* line 35, ../sass/components/_arts.scss */
+#block-lang-dropdown-language .dd-selected {
+  padding: 6px;
+}
+/* line 38, ../sass/components/_arts.scss */
+#block-lang-dropdown-language .dd-select {
+  width: 78px !important;
+  height: 27px;
+  background-color: #000 !important;
+  border: 1px solid #000 !important;
+  border-radius: 0;
+}
+/* line 53, ../sass/_mixins.scss */
+#block-lang-dropdown-language .dd-select:hover {
+  background-color: #fff !important;
+  border: 1px solid #000 !important;
+}
+/* line 56, ../sass/_mixins.scss */
+#block-lang-dropdown-language .dd-select:hover a {
+  color: #000 !important;
+}
+/* line 43, ../sass/components/_arts.scss */
+#block-lang-dropdown-language .dd-select a {
+  color: #fff;
+}
+/* line 47, ../sass/components/_arts.scss */
+#block-lang-dropdown-language .dd-select:hover .dd-pointer,
+#block-lang-dropdown-language .dd-select:hover .dd-pointer-down {
+  border-color: #000 transparent transparent;
+  border-width: 6px;
+}
+/* line 54, ../sass/components/_arts.scss */
+#block-lang-dropdown-language .dd-pointer,
+#block-lang-dropdown-language .dd-pointer-down {
+  border-color: #fff rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
+  right: 80%;
+}
+
+/* line 64, ../sass/components/_arts.scss */
+#block-textsize-form h2 {
+  display: none;
 }
 
 /**
