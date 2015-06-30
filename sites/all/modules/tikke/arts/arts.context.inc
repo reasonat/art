@@ -35,11 +35,17 @@ function arts_context_default_contexts() {
           'region' => 'content',
           'weight' => '-10',
         ),
+        'system-main' => array(
+          'module' => 'system',
+          'delta' => 'main',
+          'region' => 'content',
+          'weight' => '-9',
+        ),
         'views-arts_galleries-block_1' => array(
           'module' => 'views',
           'delta' => 'arts_galleries-block_1',
           'region' => 'content',
-          'weight' => '-9',
+          'weight' => '-8',
         ),
       ),
     ),
