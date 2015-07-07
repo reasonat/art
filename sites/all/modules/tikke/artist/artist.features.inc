@@ -19,7 +19,7 @@ function artist_ctools_plugin_api($module = NULL, $api = NULL) {
 function artist_node_info() {
   $items = array(
     'artists' => array(
-      'name' => t('אומן'),
+      'name' => t('אמן'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',

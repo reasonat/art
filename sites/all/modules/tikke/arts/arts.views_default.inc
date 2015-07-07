@@ -64,7 +64,7 @@ function arts_views_default_views() {
   );
   $handler->display->display_options['fields']['field_art_gallery']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_art_gallery']['delta_offset'] = '0';
-  /* שדה: תוכן: אומן היצירה */
+  /* שדה: תוכן: אמן/ית היצירה */
   $handler->display->display_options['fields']['field_artis']['id'] = 'field_artis';
   $handler->display->display_options['fields']['field_artis']['table'] = 'field_data_field_artis';
   $handler->display->display_options['fields']['field_artis']['field'] = 'field_artis';
@@ -721,9 +721,19 @@ function arts_views_default_views() {
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['value'] = 'All';
   $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  $handler->display->display_options['filters']['status']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['status']['expose']['operator_id'] = '';
+  $handler->display->display_options['filters']['status']['expose']['label'] = 'סטאטוס';
+  $handler->display->display_options['filters']['status']['expose']['operator'] = 'status_op';
+  $handler->display->display_options['filters']['status']['expose']['identifier'] = 'status';
+  $handler->display->display_options['filters']['status']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+  );
   /* Filter criterion: תוכן: סוג */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
@@ -899,6 +909,7 @@ function arts_views_default_views() {
     t('צפייה'),
     t('עריכה'),
     t('מפורסם?'),
+    t('סטאטוס'),
     t('קמפוס'),
     t('שפה'),
     t('Page'),

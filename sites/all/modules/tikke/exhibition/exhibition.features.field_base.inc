@@ -59,7 +59,7 @@ function exhibition_field_default_field_bases() {
       'cache_count' => 4,
       'cache_enabled' => 1,
       'granularity' => array(
-        'day' => 'day',
+        'day' => 0,
         'hour' => 0,
         'minute' => 0,
         'month' => 'month',
@@ -78,7 +78,7 @@ function exhibition_field_default_field_bases() {
   // Exported field_base: 'field_exh_gallery_bottom'
   $field_bases['field_exh_gallery_bottom'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_exh_gallery_bottom',
@@ -100,7 +100,7 @@ function exhibition_field_default_field_bases() {
   // Exported field_base: 'field_exh_gallery_top'
   $field_bases['field_exh_gallery_top'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_exh_gallery_top',
@@ -154,7 +154,7 @@ function exhibition_field_default_field_bases() {
       'cache_count' => 4,
       'cache_enabled' => 1,
       'granularity' => array(
-        'day' => 'day',
+        'day' => 0,
         'hour' => 0,
         'minute' => 0,
         'month' => 'month',

@@ -42,11 +42,10 @@ function arts_field_default_field_instances() {
     'label' => 'שנת היצירה',
     'required' => 0,
     'settings' => array(
-      'default_value' => 'now',
+      'default_value' => 'blank',
       'default_value2' => 'same',
       'default_value_code' => '',
       'default_value_code2' => '',
-      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -327,7 +326,7 @@ function arts_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_artis',
-    'label' => 'אומן היצירה',
+    'label' => 'אמן/ית היצירה',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -575,9 +574,12 @@ function arts_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
+      'module' => 'autocomplete_deluxe',
+      'settings' => array(
+        'autocomplete_deluxe_path' => 'autocomplete_deluxe/taxonomy',
+        'size' => 60,
+      ),
+      'type' => 'autocomplete_deluxe_taxonomy',
       'weight' => 37,
     ),
   );
@@ -709,8 +711,8 @@ function arts_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('אומן היצירה');
   t('איפה היצירה נמצאת? ');
+  t('אמן/ית היצירה');
   t('גלריית היצירה');
   t('חומר');
   t('מידות');
