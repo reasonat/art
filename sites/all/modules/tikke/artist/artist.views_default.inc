@@ -252,10 +252,6 @@ function artist_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = 'שם';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* שדה: תוכן: סוג */
-  $handler->display->display_options['fields']['type']['id'] = 'type';
-  $handler->display->display_options['fields']['type']['table'] = 'node';
-  $handler->display->display_options['fields']['type']['field'] = 'type';
   /* שדה: תוכן: קישור */
   $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
@@ -337,11 +333,8 @@ function artist_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'treasurer' => 'treasurer',
     'artists' => 'artists',
-    'designer' => 'designer',
   );
-  $handler->display->display_options['filters']['type']['exposed'] = TRUE;
   $handler->display->display_options['filters']['type']['expose']['operator_id'] = 'type_op';
   $handler->display->display_options['filters']['type']['expose']['label'] = 'סוג';
   $handler->display->display_options['filters']['type']['expose']['operator'] = 'type_op';
@@ -386,13 +379,13 @@ function artist_views_default_views() {
     t('הסרת פרסום'),
     t('פרסום תוכן'),
     t('שם'),
-    t('סוג'),
     t('ניהול'),
     t('צפייה'),
     t('עריכה'),
     t('מפורסם?'),
     t('שפה'),
     t('סטאטוס'),
+    t('סוג'),
     t('Page'),
   );
   $export['artists_manage_view'] = $view;
