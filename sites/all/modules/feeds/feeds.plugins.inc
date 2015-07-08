@@ -168,5 +168,9 @@ function _feeds_feeds_plugins() {
     );
   }
 
+  // Allow other modules to alter the listed plugins
+  drupal_alter('feeds_plugins', $info);
+
+
   return $info;
 }
