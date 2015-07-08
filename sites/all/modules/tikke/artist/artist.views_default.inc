@@ -39,6 +39,7 @@ function artist_views_default_views() {
   $handler->display->display_options['pager']['options']['expose']['items_per_page'] = TRUE;
   $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'כמות לתצוגה';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options'] = '25, 50, 100';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = TRUE;
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- הכל -';
   $handler->display->display_options['pager']['options']['tags']['first'] = '« לעמוד הראשון';
   $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ לעמוד הקודם';
