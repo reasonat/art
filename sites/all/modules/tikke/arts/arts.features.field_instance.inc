@@ -61,7 +61,7 @@ function arts_field_default_field_instances() {
         'year_range' => '-150:+0',
       ),
       'type' => 'date_select',
-      'weight' => 9,
+      'weight' => 8,
     ),
   );
 
@@ -170,7 +170,7 @@ function arts_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 39,
+      'weight' => 38,
     ),
   );
 
@@ -213,7 +213,7 @@ function arts_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 41,
+      'weight' => 39,
     ),
   );
 
@@ -257,7 +257,7 @@ function arts_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 38,
+      'weight' => 37,
     ),
   );
 
@@ -428,6 +428,50 @@ function arts_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-art-field_comments'
+  $field_instances['node-art-field_comments'] = array(
+    'bundle' => 'art',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 21,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_comments',
+    'label' => 'הערות',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'maxlength_js' => '',
+        'maxlength_js_enforce' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'maxlength_js_truncate_html' => 0,
+        'rows' => 4,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 36,
+    ),
+  );
+
   // Exported field_instance: 'node-art-field_gallery_grid'
   $field_instances['node-art-field_gallery_grid'] = array(
     'bundle' => 'art',
@@ -580,12 +624,12 @@ function arts_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 37,
+      'weight' => 36,
     ),
   );
 
-  // Exported field_instance: 'node-art-field_measures'
-  $field_instances['node-art-field_measures'] = array(
+  // Exported field_instance: 'node-art-field_sizes'
+  $field_instances['node-art-field_sizes'] = array(
     'bundle' => 'art',
     'default_value' => NULL,
     'deleted' => 0,
@@ -593,10 +637,10 @@ function arts_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_plain',
-        'weight' => 16,
+        'type' => 'text_default',
+        'weight' => 20,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -606,19 +650,23 @@ function arts_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_measures',
+    'field_name' => 'field_sizes',
     'label' => 'מידות',
     'required' => 0,
     'settings' => array(
-      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 36,
+      'module' => 'text',
+      'settings' => array(
+        'maxlength_js' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 40,
     ),
   );
 
@@ -705,7 +753,7 @@ function arts_field_default_field_instances() {
         'rows' => 10,
       ),
       'type' => 'text_textarea',
-      'weight' => 36,
+      'weight' => 35,
     ),
   );
 
@@ -714,6 +762,7 @@ function arts_field_default_field_instances() {
   t('איפה היצירה נמצאת? ');
   t('אמן/ית היצירה');
   t('גלריית היצירה');
+  t('הערות');
   t('חומר');
   t('מידות');
   t('מיקום היצירה');

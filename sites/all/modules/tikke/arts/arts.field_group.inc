@@ -50,8 +50,9 @@ function arts_field_group_info() {
     'label' => 'תוכן ',
     'weight' => '34',
     'children' => array(
-      0 => 'field_teaser',
-      1 => 'field_text',
+      0 => 'field_text',
+      1 => 'field_teaser',
+      2 => 'field_comments',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -108,11 +109,11 @@ function arts_field_group_info() {
     'label' => 'ראשי',
     'weight' => '5',
     'children' => array(
-      0 => 'group_tags',
-      1 => 'group_media',
+      0 => 'group_artist',
+      1 => 'group_content',
       2 => 'group_global',
-      3 => 'group_content',
-      4 => 'group_artist',
+      3 => 'group_media',
+      4 => 'group_tags',
     ),
     'format_type' => 'tabs',
     'format_settings' => array(
@@ -170,8 +171,8 @@ function arts_field_group_info() {
       1 => 'field_art_style',
       2 => 'field_art_location',
       3 => 'field_art_location_text',
-      4 => 'field_measures',
-      5 => 'field_material',
+      4 => 'field_material',
+      5 => 'field_sizes',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

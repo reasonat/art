@@ -335,6 +335,7 @@ function arts_views_default_views() {
   $handler->display->display_options['pager']['options']['expose']['items_per_page'] = TRUE;
   $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'כמות לתצוגה';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options'] = '25, 50, 100';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = TRUE;
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- הכל -';
   $handler->display->display_options['pager']['options']['tags']['first'] = '« לעמוד הראשון';
   $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ לעמוד הקודם';
@@ -615,6 +616,14 @@ function arts_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = 'יצירה';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* שדה: תוכן: אמן/ית היצירה */
+  $handler->display->display_options['fields']['field_artis']['id'] = 'field_artis';
+  $handler->display->display_options['fields']['field_artis']['table'] = 'field_data_field_artis';
+  $handler->display->display_options['fields']['field_artis']['field'] = 'field_artis';
+  $handler->display->display_options['fields']['field_artis']['label'] = 'אמנים';
+  $handler->display->display_options['fields']['field_artis']['settings'] = array(
+    'link' => 0,
+  );
   /* שדה: שדה: מספר קטלוג */
   $handler->display->display_options['fields']['field_catalog']['id'] = 'field_catalog';
   $handler->display->display_options['fields']['field_catalog']['table'] = 'field_data_field_catalog';
@@ -663,11 +672,6 @@ function arts_views_default_views() {
   $handler->display->display_options['fields']['field_material']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_material']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_material']['separator'] = '</br> ';
-  /* שדה: תוכן: מידות */
-  $handler->display->display_options['fields']['field_measures']['id'] = 'field_measures';
-  $handler->display->display_options['fields']['field_measures']['table'] = 'field_data_field_measures';
-  $handler->display->display_options['fields']['field_measures']['field'] = 'field_measures';
-  $handler->display->display_options['fields']['field_measures']['type'] = 'taxonomy_term_reference_plain';
   /* שדה: תוכן: סגנון היצירה */
   $handler->display->display_options['fields']['field_art_style']['id'] = 'field_art_style';
   $handler->display->display_options['fields']['field_art_style']['table'] = 'field_data_field_art_style';
@@ -865,6 +869,21 @@ function arts_views_default_views() {
   );
   $handler->display->display_options['filters']['field_art_type_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_art_type_tid']['vocabulary'] = 'art_type';
+  /* Filter criterion: תוכן: אמן/ית היצירה (field_artis) */
+  $handler->display->display_options['filters']['field_artis_target_id']['id'] = 'field_artis_target_id';
+  $handler->display->display_options['filters']['field_artis_target_id']['table'] = 'field_data_field_artis';
+  $handler->display->display_options['filters']['field_artis_target_id']['field'] = 'field_artis_target_id';
+  $handler->display->display_options['filters']['field_artis_target_id']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_artis_target_id']['expose']['operator_id'] = 'field_artis_target_id_op';
+  $handler->display->display_options['filters']['field_artis_target_id']['expose']['label'] = 'אמן/ית';
+  $handler->display->display_options['filters']['field_artis_target_id']['expose']['operator'] = 'field_artis_target_id_op';
+  $handler->display->display_options['filters']['field_artis_target_id']['expose']['identifier'] = 'field_artis_target_id';
+  $handler->display->display_options['filters']['field_artis_target_id']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+  );
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
@@ -897,12 +916,12 @@ function arts_views_default_views() {
     t('הסרת פרסום'),
     t('פרסום תוכן'),
     t('יצירה'),
+    t('אמנים'),
     t('מק״ט'),
     t('מיקום'),
     t('קמפוס '),
     t('שנת היצירה'),
     t('חומר'),
-    t('מידות'),
     t('סגנון'),
     t('סוג'),
     t('ניהול'),
@@ -912,6 +931,7 @@ function arts_views_default_views() {
     t('סטאטוס'),
     t('קמפוס'),
     t('שפה'),
+    t('אמן/ית'),
     t('Page'),
   );
   $export['arts_manage_view'] = $view;
