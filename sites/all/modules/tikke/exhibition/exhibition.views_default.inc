@@ -449,7 +449,7 @@ function exhibition_views_default_views() {
     'scale' => '2',
     'prefix_suffix' => 1,
   );
-  /* שדה: תוכן: תאריך פתיחת התערוכה */
+  /* שדה: תוכן: תאריך מלא */
   $handler->display->display_options['fields']['field_exh_open_date']['id'] = 'field_exh_open_date';
   $handler->display->display_options['fields']['field_exh_open_date']['table'] = 'field_data_field_exh_open_date';
   $handler->display->display_options['fields']['field_exh_open_date']['field'] = 'field_exh_open_date';
@@ -462,20 +462,12 @@ function exhibition_views_default_views() {
     'multiple_to' => '',
     'show_repeat_rule' => 'show',
   );
-  /* שדה: תוכן: תאריך סגירת התערוכה */
+  /* שדה: Broken/missing handler */
   $handler->display->display_options['fields']['field_eh_close_date']['id'] = 'field_eh_close_date';
   $handler->display->display_options['fields']['field_eh_close_date']['table'] = 'field_data_field_eh_close_date';
   $handler->display->display_options['fields']['field_eh_close_date']['field'] = 'field_eh_close_date';
   $handler->display->display_options['fields']['field_eh_close_date']['label'] = '';
   $handler->display->display_options['fields']['field_eh_close_date']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_eh_close_date']['settings'] = array(
-    'format_type' => 'short',
-    'fromto' => 'both',
-    'multiple_number' => '',
-    'multiple_from' => '',
-    'multiple_to' => '',
-    'show_repeat_rule' => 'show',
-  );
   /* שדה: תוכן: קמפוס  */
   $handler->display->display_options['fields']['field_campus']['id'] = 'field_campus';
   $handler->display->display_options['fields']['field_campus']['table'] = 'field_data_field_campus';
@@ -585,7 +577,7 @@ function exhibition_views_default_views() {
     4 => 0,
   );
   $handler->display->display_options['filters']['language']['expose']['reduce'] = TRUE;
-  /* Filter criterion: תוכן: תאריך פתיחת התערוכה (field_exh_open_date) */
+  /* Filter criterion: תוכן: תאריך מלא (field_exh_open_date) */
   $handler->display->display_options['filters']['field_exh_open_date_value']['id'] = 'field_exh_open_date_value';
   $handler->display->display_options['filters']['field_exh_open_date_value']['table'] = 'field_data_field_exh_open_date';
   $handler->display->display_options['filters']['field_exh_open_date_value']['field'] = 'field_exh_open_date_value';

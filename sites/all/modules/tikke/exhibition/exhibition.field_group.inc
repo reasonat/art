@@ -23,8 +23,8 @@ function exhibition_field_group_info() {
     'label' => 'תוכן התערוכה',
     'weight' => '22',
     'children' => array(
-      0 => 'field_text',
-      1 => 'field_teaser',
+      0 => 'field_teaser',
+      1 => 'field_text',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -51,8 +51,8 @@ function exhibition_field_group_info() {
     'label' => 'אוצרים ומעצבים',
     'weight' => '25',
     'children' => array(
-      0 => 'field_treasurers_name',
-      1 => 'field_designers',
+      0 => 'field_designers',
+      1 => 'field_treasurers_name',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -79,10 +79,16 @@ function exhibition_field_group_info() {
     'label' => 'מידע כללי',
     'weight' => '24',
     'children' => array(
-      0 => 'field_exh_open_date',
-      1 => 'field_eh_close_date',
-      2 => 'field_campus',
-      3 => 'field_exh_location',
+      0 => 'field_campus',
+      1 => 'field_exh_location',
+      2 => 'field_exh_open_date',
+      3 => 'field_month_date',
+      4 => 'field_date_year',
+      5 => 'field_open_date',
+      6 => 'field_closing_date',
+      7 => 'field_full_date_2',
+      8 => 'field_month_date_2',
+      9 => 'field_year_date_2',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -137,8 +143,8 @@ function exhibition_field_group_info() {
     'label' => 'מדיה',
     'weight' => '26',
     'children' => array(
-      0 => 'field_exh_gallery_top',
-      1 => 'field_exh_gallery_bottom',
+      0 => 'field_exh_gallery_bottom',
+      1 => 'field_exh_gallery_top',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

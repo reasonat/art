@@ -50,6 +50,98 @@ function exhibition_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-exhibition-field_closing_date'
+  $field_instances['node-exhibition-field_closing_date'] = array(
+    'bundle' => 'exhibition',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 15,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_closing_date',
+    'label' => 'תאריך סגירת התערוכה',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 17,
+    ),
+  );
+
+  // Exported field_instance: 'node-exhibition-field_date_year'
+  $field_instances['node-exhibition-field_date_year'] = array(
+    'bundle' => 'exhibition',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'show_repeat_rule' => 'show',
+        ),
+        'type' => 'date_default',
+        'weight' => 13,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_date_year',
+    'label' => 'תאריך לפי שנה',
+    'required' => 0,
+    'settings' => array(
+      'default_value' => 'blank',
+      'default_value2' => 'same',
+      'default_value_code' => '',
+      'default_value_code2' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'date',
+      'settings' => array(
+        'increment' => 15,
+        'input_format' => 'Y-m-d H:i:s',
+        'input_format_custom' => '',
+        'label_position' => 'above',
+        'repeat_collapsed' => 0,
+        'text_parts' => array(),
+        'year_range' => '-100:+0',
+      ),
+      'type' => 'date_select',
+      'weight' => 16,
+    ),
+  );
+
   // Exported field_instance: 'node-exhibition-field_designers'
   $field_instances['node-exhibition-field_designers'] = array(
     'bundle' => 'exhibition',
@@ -94,62 +186,7 @@ function exhibition_field_default_field_instances() {
         ),
       ),
       'type' => 'inline_entity_form',
-      'weight' => 5,
-    ),
-  );
-
-  // Exported field_instance: 'node-exhibition-field_eh_close_date'
-  $field_instances['node-exhibition-field_eh_close_date'] = array(
-    'bundle' => 'exhibition',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'inline',
-        'module' => 'date',
-        'settings' => array(
-          'format_type' => 'long',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
-          'show_repeat_rule' => 'show',
-        ),
-        'type' => 'date_default',
-        'weight' => 6,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_eh_close_date',
-    'label' => 'תאריך סגירת התערוכה',
-    'required' => 0,
-    'settings' => array(
-      'default_value' => 'blank',
-      'default_value2' => 'same',
-      'default_value_code' => '',
-      'default_value_code2' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'date',
-      'settings' => array(
-        'increment' => 15,
-        'input_format' => 'Y-m-d H:i:s',
-        'input_format_custom' => '',
-        'label_position' => 'above',
-        'repeat_collapsed' => 0,
-        'text_parts' => array(),
-        'year_range' => '-5:+1',
-      ),
-      'type' => 'date_select',
-      'weight' => 14,
+      'weight' => 9,
     ),
   );
 
@@ -368,7 +405,7 @@ function exhibition_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_exh_open_date',
-    'label' => 'תאריך פתיחת התערוכה',
+    'label' => 'תאריך מלא',
     'required' => 0,
     'settings' => array(
       'default_value' => 'blank',
@@ -387,9 +424,211 @@ function exhibition_field_default_field_instances() {
         'label_position' => 'above',
         'repeat_collapsed' => 0,
         'text_parts' => array(),
-        'year_range' => '-5:+1',
+        'year_range' => '-100:+0',
       ),
       'type' => 'date_popup',
+      'weight' => 14,
+    ),
+  );
+
+  // Exported field_instance: 'node-exhibition-field_full_date_2'
+  $field_instances['node-exhibition-field_full_date_2'] = array(
+    'bundle' => 'exhibition',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'show_repeat_rule' => 'show',
+        ),
+        'type' => 'date_default',
+        'weight' => 16,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_full_date_2',
+    'label' => 'תאריך מלא סגירה',
+    'required' => 0,
+    'settings' => array(
+      'default_value' => 'blank',
+      'default_value2' => 'same',
+      'default_value_code' => '',
+      'default_value_code2' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'date',
+      'settings' => array(
+        'increment' => 15,
+        'input_format' => 'Y-m-d H:i:s',
+        'input_format_custom' => '',
+        'label_position' => 'above',
+        'repeat_collapsed' => 0,
+        'text_parts' => array(),
+        'year_range' => '-100:+0',
+      ),
+      'type' => 'date_popup',
+      'weight' => 18,
+    ),
+  );
+
+  // Exported field_instance: 'node-exhibition-field_month_date'
+  $field_instances['node-exhibition-field_month_date'] = array(
+    'bundle' => 'exhibition',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'show_repeat_rule' => 'show',
+        ),
+        'type' => 'date_default',
+        'weight' => 12,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_month_date',
+    'label' => 'תאריך לפי חודש',
+    'required' => 0,
+    'settings' => array(
+      'default_value' => 'blank',
+      'default_value2' => 'same',
+      'default_value_code' => '',
+      'default_value_code2' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'date',
+      'settings' => array(
+        'increment' => 15,
+        'input_format' => 'Y-m-d H:i:s',
+        'input_format_custom' => '',
+        'label_position' => 'above',
+        'repeat_collapsed' => 0,
+        'text_parts' => array(),
+        'year_range' => '-100:+0',
+      ),
+      'type' => 'date_select',
+      'weight' => 15,
+    ),
+  );
+
+  // Exported field_instance: 'node-exhibition-field_month_date_2'
+  $field_instances['node-exhibition-field_month_date_2'] = array(
+    'bundle' => 'exhibition',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'show_repeat_rule' => 'show',
+        ),
+        'type' => 'date_default',
+        'weight' => 17,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_month_date_2',
+    'label' => 'תאריך חודשי סגירה',
+    'required' => 0,
+    'settings' => array(
+      'default_value' => 'blank',
+      'default_value2' => 'same',
+      'default_value_code' => '',
+      'default_value_code2' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'date',
+      'settings' => array(
+        'increment' => 15,
+        'input_format' => 'Y-m-d H:i:s',
+        'input_format_custom' => '',
+        'label_position' => 'above',
+        'repeat_collapsed' => 0,
+        'text_parts' => array(),
+        'year_range' => '-100:+0',
+      ),
+      'type' => 'date_select',
+      'weight' => 19,
+    ),
+  );
+
+  // Exported field_instance: 'node-exhibition-field_open_date'
+  $field_instances['node-exhibition-field_open_date'] = array(
+    'bundle' => 'exhibition',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 14,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_open_date',
+    'label' => 'תאריך פתיחת התערוכה',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
       'weight' => 13,
     ),
   );
@@ -567,7 +806,62 @@ function exhibition_field_default_field_instances() {
         ),
       ),
       'type' => 'inline_entity_form',
-      'weight' => 4,
+      'weight' => 8,
+    ),
+  );
+
+  // Exported field_instance: 'node-exhibition-field_year_date_2'
+  $field_instances['node-exhibition-field_year_date_2'] = array(
+    'bundle' => 'exhibition',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'show_repeat_rule' => 'show',
+        ),
+        'type' => 'date_default',
+        'weight' => 18,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_year_date_2',
+    'label' => 'תאריך שנתי סגירה',
+    'required' => 0,
+    'settings' => array(
+      'default_value' => 'blank',
+      'default_value2' => 'same',
+      'default_value_code' => '',
+      'default_value_code2' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'date',
+      'settings' => array(
+        'increment' => 15,
+        'input_format' => 'Y-m-d H:i:s',
+        'input_format_custom' => '',
+        'label_position' => 'above',
+        'repeat_collapsed' => 0,
+        'text_parts' => array(),
+        'year_range' => '-100:+0',
+      ),
+      'type' => 'date_select',
+      'weight' => 20,
     ),
   );
 
@@ -580,8 +874,14 @@ function exhibition_field_default_field_instances() {
   t('קמפוס ');
   t('שמות האוצרים');
   t('שמות המעצבים');
+  t('תאריך חודשי סגירה');
+  t('תאריך לפי חודש');
+  t('תאריך לפי שנה');
+  t('תאריך מלא');
+  t('תאריך מלא סגירה');
   t('תאריך סגירת התערוכה');
   t('תאריך פתיחת התערוכה');
+  t('תאריך שנתי סגירה');
   t('תוכן העמוד');
   t('תקציר לעמוד');
 
