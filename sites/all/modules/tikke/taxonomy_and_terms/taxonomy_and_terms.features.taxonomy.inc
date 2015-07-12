@@ -39,6 +39,16 @@ function taxonomy_and_terms_taxonomy_default_vocabularies() {
       'language' => 'und',
       'i18n_mode' => 4,
     ),
+    'exhibition_type' => array(
+      'name' => 'סוג התערוכה',
+      'machine_name' => 'exhibition_type',
+      'description' => '',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+      'language' => 'und',
+      'i18n_mode' => 4,
+    ),
     'location' => array(
       'name' => 'מיקום',
       'machine_name' => 'location',
@@ -52,16 +62,6 @@ function taxonomy_and_terms_taxonomy_default_vocabularies() {
     'material' => array(
       'name' => 'חומר',
       'machine_name' => 'material',
-      'description' => '',
-      'hierarchy' => 0,
-      'module' => 'taxonomy',
-      'weight' => 0,
-      'language' => 'und',
-      'i18n_mode' => 4,
-    ),
-    'measures' => array(
-      'name' => 'מידות',
-      'machine_name' => 'measures',
       'description' => '',
       'hierarchy' => 0,
       'module' => 'taxonomy',

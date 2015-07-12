@@ -462,12 +462,6 @@ function exhibition_views_default_views() {
     'multiple_to' => '',
     'show_repeat_rule' => 'show',
   );
-  /* שדה: Broken/missing handler */
-  $handler->display->display_options['fields']['field_eh_close_date']['id'] = 'field_eh_close_date';
-  $handler->display->display_options['fields']['field_eh_close_date']['table'] = 'field_data_field_eh_close_date';
-  $handler->display->display_options['fields']['field_eh_close_date']['field'] = 'field_eh_close_date';
-  $handler->display->display_options['fields']['field_eh_close_date']['label'] = '';
-  $handler->display->display_options['fields']['field_eh_close_date']['element_label_colon'] = FALSE;
   /* שדה: תוכן: קמפוס  */
   $handler->display->display_options['fields']['field_campus']['id'] = 'field_campus';
   $handler->display->display_options['fields']['field_campus']['table'] = 'field_data_field_campus';
@@ -605,6 +599,19 @@ function exhibition_views_default_views() {
   $handler->display->display_options['menu']['name'] = 'menu-managermenu';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
+
+  /* Display: Data export */
+  $handler = $view->new_display('views_data_export', 'Data export', 'views_data_export_1');
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['style_plugin'] = 'views_data_export_xls';
+  $handler->display->display_options['style_options']['provide_file'] = 1;
+  $handler->display->display_options['style_options']['filename'] = '%timestamp-full-exhibitions.xls';
+  $handler->display->display_options['style_options']['parent_sort'] = 1;
+  $handler->display->display_options['path'] = 'exhibition_export';
+  $handler->display->display_options['displays'] = array(
+    'page' => 'page',
+    'default' => 0,
+  );
   $translatables['exhibition_manager'] = array(
     t('Master'),
     t('ניהול יצירות'),
@@ -640,6 +647,7 @@ function exhibition_views_default_views() {
     t('שפה'),
     t('פתיחה'),
     t('Page'),
+    t('Data export'),
   );
   $export['exhibition_manager'] = $view;
 

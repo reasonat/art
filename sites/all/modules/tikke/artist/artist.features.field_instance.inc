@@ -91,7 +91,6 @@ function artist_field_default_field_instances() {
       'default_value2' => 'same',
       'default_value_code' => '',
       'default_value_code2' => '',
-      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -147,7 +146,6 @@ function artist_field_default_field_instances() {
       'default_value2' => 'same',
       'default_value_code' => '',
       'default_value_code2' => '',
-      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(

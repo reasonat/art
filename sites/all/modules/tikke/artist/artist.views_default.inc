@@ -22,7 +22,7 @@ function artist_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'ניהול יצירות';
+  $handler->display->display_options['title'] = 'ניהול אמנים';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -285,6 +285,30 @@ function artist_views_default_views() {
   $handler->display->display_options['fields']['language']['id'] = 'language';
   $handler->display->display_options['fields']['language']['table'] = 'node';
   $handler->display->display_options['fields']['language']['field'] = 'language';
+  /* שדה: תוכן: תאריך לידה */
+  $handler->display->display_options['fields']['field_birthday']['id'] = 'field_birthday';
+  $handler->display->display_options['fields']['field_birthday']['table'] = 'field_data_field_birthday';
+  $handler->display->display_options['fields']['field_birthday']['field'] = 'field_birthday';
+  $handler->display->display_options['fields']['field_birthday']['settings'] = array(
+    'format_type' => 'short',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_repeat_rule' => 'show',
+  );
+  /* שדה: תוכן: תאריך פטירה */
+  $handler->display->display_options['fields']['field_date_of_death']['id'] = 'field_date_of_death';
+  $handler->display->display_options['fields']['field_date_of_death']['table'] = 'field_data_field_date_of_death';
+  $handler->display->display_options['fields']['field_date_of_death']['field'] = 'field_date_of_death';
+  $handler->display->display_options['fields']['field_date_of_death']['settings'] = array(
+    'format_type' => 'short',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_repeat_rule' => 'show',
+  );
   /* Sort criterion: תוכן: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -353,14 +377,27 @@ function artist_views_default_views() {
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['path'] = 'admin/artists_mange';
   $handler->display->display_options['menu']['type'] = 'normal';
-  $handler->display->display_options['menu']['title'] = 'ניהול אמנים אוצרים ומעצבים';
+  $handler->display->display_options['menu']['title'] = 'ניהול אמנים';
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['name'] = 'menu-managermenu';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
+
+  /* Display: Data export */
+  $handler = $view->new_display('views_data_export', 'Data export', 'views_data_export_1');
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['style_plugin'] = 'views_data_export_xls';
+  $handler->display->display_options['style_options']['provide_file'] = 1;
+  $handler->display->display_options['style_options']['filename'] = '%timestamp-full-artists.xls';
+  $handler->display->display_options['style_options']['parent_sort'] = 1;
+  $handler->display->display_options['path'] = 'export_artist';
+  $handler->display->display_options['displays'] = array(
+    'page' => 'page',
+    'default' => 0,
+  );
   $translatables['artists_manage_view'] = array(
     t('Master'),
-    t('ניהול יצירות'),
+    t('ניהול אמנים'),
     t('more'),
     t('סינון'),
     t('אתחול'),
@@ -385,9 +422,12 @@ function artist_views_default_views() {
     t('עריכה'),
     t('מפורסם?'),
     t('שפה'),
+    t('תאריך לידה'),
+    t('תאריך פטירה'),
     t('סטאטוס'),
     t('סוג'),
     t('Page'),
+    t('Data export'),
   );
   $export['artists_manage_view'] = $view;
 
