@@ -60,3 +60,11 @@
   }
 }
 
+
+@mixin width(){
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 3%;
+  box-sizing: border-box;
+}
