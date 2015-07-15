@@ -17,16 +17,26 @@
 Drupal.behaviors.my_custom_behavior = {
   attach: function(context, settings) {
 
+$height = $(window).height()-138;
+
 $(".menu-button").click(function(){
   if ($("#main-menu").hasClass("hide")){
+    $("#triangle-topleft").addClass("display").removeClass("hide");
+    $("#square").addClass("display").removeClass("hide");
     $("#main-menu").addClass("display").removeClass("hide");
     $("body").addClass("display-menu");
+    $(".display-menu #main-menu").css("height", $height); 
+    $(".display-menu #square").css("height", $height); 
+    $("#triangle-topleft").css("border-bottom-width", $height); 
   }
   else if ($("#main-menu").hasClass("display")){
+    $("#triangle-topleft").addClass("hide").removeClass("display");
     $("#main-menu").addClass("hide").removeClass("display");
     $("body").removeClass("display-menu");
   }
 });
+
+$("#block-search-form .form-type-textfield label").removeClass("element-invisible");
 
 
   }
