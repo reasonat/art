@@ -84,6 +84,7 @@
       </div>
     </div>
       <?php if ($main_menu): ?>
+      <div class="wrapper-width">
         <nav id="main-menu" class="hide" role="navigation" tabindex="-1">
           <?php
           // This code snippet is hard to modify. We recommend turning off the
@@ -102,12 +103,12 @@
             ),
           )); ?>
         </nav>
+      </div>
       <?php endif; ?>
 
       <?php print render($page['navigation']); ?>
-      <div id="container-triangle">
-        <div id="triangle-topleft"></div>
-      </div>
+      <div id="square" class="hide"></div>
+      <div id="triangle-topleft" class="hide"></div>
     </div>
 
     <?php
