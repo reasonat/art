@@ -1746,38 +1746,20 @@ a:active, a:hover {
   color: #00A193;
 }
 
-/* line 44, ../sass/components/_arts.scss */
-html {
-  height: 100%;
-}
-/* line 46, ../sass/components/_arts.scss */
-html #page {
-  height: 100%;
-  max-width: 100%;
-}
-/* line 51, ../sass/components/_arts.scss */
-html .display-menu #main {
-  height: calc(100% - 138px);
-}
-/* line 54, ../sass/components/_arts.scss */
-html .display-menu #navigation {
-  height: 100%;
-}
-
-/* line 61, ../sass/components/_arts.scss */
+/* line 47, ../sass/components/_arts.scss */
 #header, #content, #navigation, .region-sidebar-first, .region-sidebar-second, #footer {
   padding-left: 30px;
   padding-right: 30px;
 }
 
-/* line 66, ../sass/components/_arts.scss */
+/* line 52, ../sass/components/_arts.scss */
 body {
   font-family: 'almoni-400', sans-serif;
   font-size: 18px;
   background-color: #fcfcfc;
 }
 
-/* line 72, ../sass/components/_arts.scss */
+/* line 58, ../sass/components/_arts.scss */
 .wrapper-width {
   width: 1200px;
   max-width: 100%;
@@ -1786,7 +1768,7 @@ body {
   box-sizing: border-box;
 }
 
-/* line 76, ../sass/components/_arts.scss */
+/* line 62, ../sass/components/_arts.scss */
 .block {
   margin-bottom: 0;
 }
@@ -1794,7 +1776,7 @@ body {
 /* 
  * main menu
  ****************************************/
-/* line 82, ../sass/components/_arts.scss */
+/* line 68, ../sass/components/_arts.scss */
 .menu-button {
   background-color: #00A193;
   color: #fff;
@@ -1805,7 +1787,7 @@ body {
   cursor: pointer;
   position: absolute;
 }
-/* line 91, ../sass/components/_arts.scss */
+/* line 77, ../sass/components/_arts.scss */
 .menu-button span {
   width: 17px;
   height: 2px;
@@ -1815,35 +1797,35 @@ body {
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
 }
-/* line 100, ../sass/components/_arts.scss */
+/* line 86, ../sass/components/_arts.scss */
 .menu-button .text {
   float: right;
   font-family: 'almoni-700', sans-serif;
   font-size: 1.5em;
 }
-/* line 105, ../sass/components/_arts.scss */
+/* line 91, ../sass/components/_arts.scss */
 .menu-button .lines {
   float: left;
   padding-right: 13px;
   padding-top: 6px;
 }
 
-/* line 113, ../sass/components/_arts.scss */
+/* line 99, ../sass/components/_arts.scss */
 .display-menu .menu-button span {
   margin: 0;
 }
-/* line 116, ../sass/components/_arts.scss */
+/* line 102, ../sass/components/_arts.scss */
 .display-menu .menu-button .line1 {
   transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   margin-top: 6px;
 }
-/* line 122, ../sass/components/_arts.scss */
+/* line 108, ../sass/components/_arts.scss */
 .display-menu .menu-button .line2 {
   display: none;
 }
-/* line 125, ../sass/components/_arts.scss */
+/* line 111, ../sass/components/_arts.scss */
 .display-menu .menu-button .line3 {
   margin-top: -2px;
   transform: rotate(135deg);
@@ -1851,7 +1833,7 @@ body {
   -webkit-transform: rotate(135deg);
 }
 
-/* line 133, ../sass/components/_arts.scss */
+/* line 119, ../sass/components/_arts.scss */
 #main-menu {
   padding-top: 20%;
   box-sizing: border-box;
@@ -1860,39 +1842,37 @@ body {
   -webkit-transition: all 0.5s;
   opacity: 1;
 }
-/* line 140, ../sass/components/_arts.scss */
+/* line 126, ../sass/components/_arts.scss */
 #main-menu li {
   width: 100%;
   padding-bottom: 13px !important;
 }
-/* line 143, ../sass/components/_arts.scss */
+/* line 129, ../sass/components/_arts.scss */
 #main-menu li a {
   font-size: 1.7em;
   color: #fff;
 }
 
-/* line 150, ../sass/components/_arts.scss */
+/* line 136, ../sass/components/_arts.scss */
 #main-menu.hide, #triangle-topleft.hide, #square.hide {
   opacity: 0;
 }
 
-/* line 154, ../sass/components/_arts.scss */
+/* line 140, ../sass/components/_arts.scss */
 #square {
   background-color: rgba(77, 77, 77, 0.9);
   position: absolute;
-  width: 350px;
   z-index: -1;
   transition: opacity 0.5s;
   -webkit-transition: opacity 0.5s;
 }
 
-/* line 163, ../sass/components/_arts.scss */
+/* line 148, ../sass/components/_arts.scss */
 #triangle-topleft {
   width: 0;
   height: 0;
   border-style: solid;
   border-color: transparent transparent rgba(77, 77, 77, 0.9) transparent;
-  right: 350px;
   position: absolute;
   top: 0;
   border-top-width: 0;
@@ -1906,55 +1886,55 @@ body {
 /* 
  * FRONT
  ****************************************/
-/* line 184, ../sass/components/_arts.scss */
+/* line 168, ../sass/components/_arts.scss */
 .front #page {
   max-width: 100%;
   padding: 0;
 }
-/* line 188, ../sass/components/_arts.scss */
+/* line 172, ../sass/components/_arts.scss */
 .front #page-title {
   display: none;
 }
-/* line 191, ../sass/components/_arts.scss */
+/* line 175, ../sass/components/_arts.scss */
 .front #main {
   padding: 0;
 }
-/* line 194, ../sass/components/_arts.scss */
+/* line 178, ../sass/components/_arts.scss */
 .front #navigation {
   width: 100%;
   padding: 0;
 }
 
-/* line 200, ../sass/components/_arts.scss */
+/* line 184, ../sass/components/_arts.scss */
 body.front {
   height: 100%;
 }
 
-/* line 204, ../sass/components/_arts.scss */
+/* line 188, ../sass/components/_arts.scss */
 .flexslider {
   border: none;
 }
 
-/* line 208, ../sass/components/_arts.scss */
+/* line 192, ../sass/components/_arts.scss */
 .view-home-page-gallery {
   position: absolute;
   top: 0;
   z-index: -1;
 }
-/* line 212, ../sass/components/_arts.scss */
+/* line 196, ../sass/components/_arts.scss */
 .view-home-page-gallery .view-content {
   position: relative;
   top: -60px;
 }
 
-/* line 218, ../sass/components/_arts.scss */
+/* line 202, ../sass/components/_arts.scss */
 .region-top {
   height: calc(100% - 138px);
   position: absolute;
   width: 100%;
   bottom: 0;
 }
-/* line 223, ../sass/components/_arts.scss */
+/* line 207, ../sass/components/_arts.scss */
 .region-top .slide {
   -webkit-background-size: cover !important;
   -moz-background-size: cover !important;
@@ -1963,13 +1943,62 @@ body.front {
   height: 100%;
   width: 100%;
 }
-/* line 231, ../sass/components/_arts.scss */
+/* line 215, ../sass/components/_arts.scss */
+.region-top .text-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+/* line 219, ../sass/components/_arts.scss */
+.region-top .text-slide .wrapper-width {
+  height: 100%;
+  position: relative;
+}
+/* line 222, ../sass/components/_arts.scss */
+.region-top .text-slide .wrapper-width .text {
+  position: absolute;
+  bottom: 30%;
+  left: 0;
+  text-align: left;
+  color: #fff;
+}
+/* line 230, ../sass/components/_arts.scss */
+.region-top .text-slide .name {
+  background-color: #00A193;
+  padding: 8px 14px 5px;
+}
+/* line 234, ../sass/components/_arts.scss */
+.region-top .text-slide .artist {
+  float: right;
+  font-size: 1.6em;
+  font-weight: bold;
+  border-left: 1px solid #fff;
+  margin-left: 10px;
+  padding-left: 10px;
+}
+/* line 242, ../sass/components/_arts.scss */
+.region-top .text-slide .title {
+  font-size: 1.3em;
+}
+/* line 245, ../sass/components/_arts.scss */
+.region-top .text-slide .continue {
+  margin-top: 6px;
+  float: right;
+  clear: right;
+  background-color: #00A193;
+  padding: 0 16px 5px;
+}
+/* line 253, ../sass/components/_arts.scss */
 .region-top .flex-active-slide, .region-top .slides, .region-top .flexslider, .region-top .view-content, .region-top .view, .region-top #block-views-home-page-slideshow-block {
   height: 100%;
   width: 100%;
   margin: 0;
 }
-/* line 237, ../sass/components/_arts.scss */
+/* line 258, ../sass/components/_arts.scss */
+.region-top .flex-direction-nav a {
+  top: 30%;
+}
+/* line 262, ../sass/components/_arts.scss */
 .region-top .flex-direction-nav a {
   background-image: url("../images/arrows.png");
   height: 52px;
@@ -1978,27 +2007,27 @@ body.front {
   text-indent: -9999px;
   display: block;
 }
-/* line 244, ../sass/components/_arts.scss */
+/* line 269, ../sass/components/_arts.scss */
 .region-top .flex-direction-nav a.flex-prev {
   background-position: 29px 0;
   right: 20px;
 }
-/* line 248, ../sass/components/_arts.scss */
+/* line 273, ../sass/components/_arts.scss */
 .region-top .flex-direction-nav a.flex-next {
   left: 20px;
   background-position: 120px 0px;
   right: auto;
 }
-/* line 255, ../sass/components/_arts.scss */
+/* line 280, ../sass/components/_arts.scss */
 .region-top .flexslider:hover .flex-direction-nav a.flex-next {
   right: auto !important;
 }
-/* line 258, ../sass/components/_arts.scss */
+/* line 283, ../sass/components/_arts.scss */
 .region-top .flex-direction-nav a::before {
   content: "";
 }
 
-/* line 263, ../sass/components/_arts.scss */
+/* line 288, ../sass/components/_arts.scss */
 .display-menu .region-top {
   z-index: -1;
 }
@@ -2006,7 +2035,7 @@ body.front {
 /* 
  * HEADER THEME
  ****************************************/
-/* line 271, ../sass/components/_arts.scss */
+/* line 296, ../sass/components/_arts.scss */
 header {
   width: 1200px;
   max-width: 100%;
@@ -2018,18 +2047,18 @@ header {
   position: relative;
 }
 
-/* line 279, ../sass/components/_arts.scss */
+/* line 304, ../sass/components/_arts.scss */
 .header__region {
   float: left;
   clear: none !important;
   left: 0;
 }
 
-/* line 286, ../sass/components/_arts.scss */
+/* line 311, ../sass/components/_arts.scss */
 #block-lang-dropdown-language {
   float: left;
 }
-/* line 288, ../sass/components/_arts.scss */
+/* line 313, ../sass/components/_arts.scss */
 #block-lang-dropdown-language select {
   height: 27px;
   color: #fff;
@@ -2044,12 +2073,12 @@ header {
   max-width: 150%;
   border: none;
 }
-/* line 302, ../sass/components/_arts.scss */
+/* line 327, ../sass/components/_arts.scss */
 #block-lang-dropdown-language option {
   background-color: #fff;
   color: #000;
 }
-/* line 306, ../sass/components/_arts.scss */
+/* line 331, ../sass/components/_arts.scss */
 #block-lang-dropdown-language .form-type-select {
   overflow: hidden;
   float: left;
@@ -2061,56 +2090,56 @@ header {
   text-align: -webkit-center;
   margin: 0px;
 }
-/* line 317, ../sass/components/_arts.scss */
+/* line 342, ../sass/components/_arts.scss */
 #block-lang-dropdown-language .form-type-select select::-ms-expand {
   display: none;
 }
 
-/* line 324, ../sass/components/_arts.scss */
+/* line 349, ../sass/components/_arts.scss */
 .block-text-resize {
   float: left;
   margin-right: 6px;
 }
-/* line 327, ../sass/components/_arts.scss */
+/* line 352, ../sass/components/_arts.scss */
 .block-text-resize a {
   background: url("../images/aaa.png") no-repeat center center transparent !important;
   width: 29px !important;
   height: 28px !important;
   margin: 0 1px 0 0 !important;
 }
-/* line 333, ../sass/components/_arts.scss */
+/* line 358, ../sass/components/_arts.scss */
 .block-text-resize #text_resize_decrease {
   background-position: 0 -39px !important;
 }
-/* line 335, ../sass/components/_arts.scss */
+/* line 360, ../sass/components/_arts.scss */
 .block-text-resize #text_resize_decrease:hover {
   background-position: 0 -1px !important;
 }
-/* line 339, ../sass/components/_arts.scss */
+/* line 364, ../sass/components/_arts.scss */
 .block-text-resize #text_resize_reset {
   background-position: 0 -115px !important;
 }
-/* line 341, ../sass/components/_arts.scss */
+/* line 366, ../sass/components/_arts.scss */
 .block-text-resize #text_resize_reset:hover {
   background-position: 0 -77px !important;
 }
-/* line 345, ../sass/components/_arts.scss */
+/* line 370, ../sass/components/_arts.scss */
 .block-text-resize #text_resize_increase {
   background-position: 0 -191px !important;
 }
-/* line 347, ../sass/components/_arts.scss */
+/* line 372, ../sass/components/_arts.scss */
 .block-text-resize #text_resize_increase:hover {
   background-position: 0 -153px !important;
 }
 
 /*********  search block  ********/
-/* line 357, ../sass/components/_arts.scss */
+/* line 382, ../sass/components/_arts.scss */
 #block-search-form {
   padding-top: 9px;
   float: right;
   clear: left;
 }
-/* line 361, ../sass/components/_arts.scss */
+/* line 386, ../sass/components/_arts.scss */
 #block-search-form label {
   font-size: 14px;
   font-weight: normal;
@@ -2119,13 +2148,13 @@ header {
   margin-right: -39px;
   padding-top: 1px;
 }
-/* line 369, ../sass/components/_arts.scss */
+/* line 394, ../sass/components/_arts.scss */
 #block-search-form .form-item {
   position: relative;
   left: -16px;
   margin: 0;
 }
-/* line 374, ../sass/components/_arts.scss */
+/* line 399, ../sass/components/_arts.scss */
 #block-search-form input.form-text {
   border: 1px solid #000;
   box-shadow: none;
@@ -2136,7 +2165,7 @@ header {
   background-color: transparent;
   height: 23px;
 }
-/* line 384, ../sass/components/_arts.scss */
+/* line 409, ../sass/components/_arts.scss */
 #block-search-form input.form-submit {
   background: url("../images/search-icon.png") no-repeat 0 0 transparent;
   border: medium none;
