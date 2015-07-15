@@ -32,6 +32,7 @@ $(".menu-button").click(function(){
   else if ($("#main-menu").hasClass("display")){
     $("#triangle-topleft").addClass("hide").removeClass("display");
     $("#main-menu").addClass("hide").removeClass("display");
+    $("#square").addClass("hide").removeClass("display");
     $("body").removeClass("display-menu");
   }
 });
