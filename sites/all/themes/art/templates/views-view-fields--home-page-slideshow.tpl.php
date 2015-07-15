@@ -25,6 +25,19 @@
  */
 
 preg_match('/\< *[img][^\>]*[src] *= *[\"\']{0,1}([^\"\']*)/i', $fields['field_art_gallery']->content, $matches); ?>
-<div class="slide" style="background:  url('<?php print $matches[1]; ?>') no-repeat center center fixed;">
 
+<a href="/node/<?php print $row->nid; ?>">
+<div class="text-slide">
+  <div class="wrapper-width">
+  	  <div class="text">
+  	  	<div class="name">
+		<span class="artist"><?php print $fields['field_artis']->content; ?> </span>
+		<span class="title"><?php print $fields['title']->content; ?> </span>
+	  </div>
+	  <div class="continue">...</div>
+	</div>
+  </div>
+</div>
+</a>
 
+	<div class="slide" style="background:  url('<?php print $matches[1]; ?>') no-repeat center center fixed;"></div>

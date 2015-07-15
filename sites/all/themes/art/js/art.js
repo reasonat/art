@@ -18,6 +18,7 @@ Drupal.behaviors.my_custom_behavior = {
   attach: function(context, settings) {
 
 $height = $(window).height()-138;
+$width = ($(window).width()-1200)/2+276;
 
 $(".menu-button").click(function(){
   if ($("#main-menu").hasClass("hide")){
@@ -27,12 +28,14 @@ $(".menu-button").click(function(){
     $("body").addClass("display-menu");
     $(".display-menu #main-menu").css("height", $height); 
     $(".display-menu #square").css("height", $height); 
-    $("#triangle-topleft").css("border-bottom-width", $height); 
+    $("#triangle-topleft").css("border-bottom-width", $height);
+    $("#triangle-topleft").css("right", $width);  
+    $(".display-menu #square").css("width", $width); 
   }
   else if ($("#main-menu").hasClass("display")){
+    $("#square").addClass("hide").removeClass("display");
     $("#triangle-topleft").addClass("hide").removeClass("display");
     $("#main-menu").addClass("hide").removeClass("display");
-    $("#square").addClass("hide").removeClass("display");
     $("body").removeClass("display-menu");
   }
 });
