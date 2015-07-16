@@ -29,7 +29,8 @@ $(".menu-button").click(function(){
     $(".display-menu #main-menu").css("height", $height); 
     $(".display-menu #square").css("height", $height); 
     $("#triangle-topleft").css("border-bottom-width", $height);
-    $("#triangle-topleft").css("right", $width);  
+    $(".i18n-he #triangle-topleft").css("right", $width);  
+    $(".i18n-en #triangle-topleft").css("left", $width);  
     $(".display-menu #square").css("width", $width); 
   }
   else if ($("#main-menu").hasClass("display")){
