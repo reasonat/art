@@ -41,12 +41,14 @@ a {
 	@include links;
 }
 
+textarea:focus, input:focus{
+    outline: 0;
+}
 
-
-//Overall Changes to theme
-#header, #content, #navigation, .region-sidebar-first, .region-sidebar-second, #footer {
-  padding-left: 30px;
-  padding-right: 30px;
+*:focus {
+    outline: 0;
+    outline-style:none;
+    outline-width:0;
 }
 
 body{
@@ -62,6 +64,28 @@ body{
 .block{
   margin-bottom: 0;
 }
+
+#page, #navigation{
+  max-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+#navigation{
+  top:138px;
+}
+
+.display-menu #navigation{
+  z-index: 200;
+}
+
+#content{
+  padding: 54px 0 0 0;
+}
+
+#main{
+  @include width;
+}
 /* 
  * main menu
  ****************************************/
@@ -69,8 +93,8 @@ body{
 	background-color: $green;
 	color: #fff;
 	overflow: hidden;
-	float: right;
-	padding: 11px 16px 6px 11px;
+	float: left;
+	padding: 11px 11px 6px 16px;
 	z-index: 200;
 	cursor: pointer;
 	position: absolute;
@@ -81,17 +105,17 @@ body{
 		background-color: #fff;
 		display: block;  
 		transition: all 0.5s;
-  		-webkit-transition: all 0.5s;
+  	-webkit-transition: all 0.5s;
 	}
 	.text{
-		float: right;
+		float: left;
 		font-family:   'almoni-700', sans-serif;
 		font-size: 1.5em;
 	}
 	.lines{
 		float: left;
-		padding-right: 13px;
-    	padding-top: 6px;
+		padding-left: 13px;
+    padding-top: 6px;
 	}
 }
 
@@ -119,7 +143,7 @@ body{
 #main-menu{
   padding-top: 20%;
   box-sizing:border-box;
-	float: right;
+	float: left;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
   opacity: 1;
@@ -153,8 +177,8 @@ body{
   position: absolute;
   top: 0;
   border-top-width: 0;
-  border-right-width: 0;
-  border-left-width: 126px;
+  border-left-width: 0;
+  border-right-width: 126px;
   opacity: 1;
   transition: opacity 0.5s;
   -webkit-transition: opacity 0.5s;
@@ -165,19 +189,8 @@ body{
  ****************************************/
 
 .front{
-	#page{
-		max-width: 100%;
-		padding: 0;
-	}
 	#page-title{
 		display: none;
-	}
-	#main{
-		padding: 0;
-	}
-	#navigation{
-		width: 100%;
-		padding: 0;
 	}
 }
 
@@ -204,6 +217,7 @@ body.front{
 	position: absolute;
 	width: 100%;
 	bottom: 0;
+  overflow: hidden;
   .slide{
       -webkit-background-size: cover!important;
       -moz-background-size: cover!important;
@@ -222,8 +236,8 @@ body.front{
       .text{
         position: absolute;
         bottom: 30%;
-        left: 0;
-        text-align: left;
+        right: 0;
+        text-align: right;
         color: #fff;
       }
     }
@@ -232,20 +246,20 @@ body.front{
         padding: 8px 14px 5px;
     }
     .artist{
-      float: right;
+      float: left;
       font-size: 1.6em;
       font-weight: bold;
-      border-left: 1px solid #fff;
-      margin-left: 10px;
-      padding-left: 10px;
+      border-right: 1px solid #fff;
+      margin-right: 10px;
+      padding-right: 10px;
     }
     .title{
       font-size: 1.3em;
     }
     .continue{
       margin-top: 6px;
-      float: right;
-      clear: right;
+      float: left;
+      clear: left;
       background-color: $green;
       padding: 0 16px 5px;
     }
@@ -264,21 +278,27 @@ body.front{
       height: 52px;
       width: 29px;
       opacity: 0.75;
-      text-indent: -9999px;
       display: block;
+      color: transparent;
+      text-indent: -9999px;
       &.flex-prev {
-        background-position: 29px 0;
-        right: 20px;
+        background-position: 120px 0;
+        left: 20px;
       }
       &.flex-next {
-        left: 20px;
-        background-position: 120px 0px;
-        right: auto;
+        right: 20px;
+        background-position: 29px 0px;
+        left: auto;
       }
     }
   }
   .flexslider:hover .flex-direction-nav a.flex-next{
-    right: auto!important;
+    right: 20px!important;
+    left: auto;
+  }
+  .flexslider:hover .flex-direction-nav a.flex-prev{
+    left: 20px!important;
+    right: auto;
   }
   .flex-direction-nav a::before{
     content: "";
@@ -298,6 +318,10 @@ header {
   padding: 47px 3% 39px!important;
   height: 138px;
   position: relative;
+}
+
+#logo{
+  float: right;
 }
 
 // the Header region 
@@ -323,6 +347,8 @@ header {
     background: transparent;
     max-width: 150%;
     border: none;
+    text-align: right;
+    padding-right: 5px;
 	}
   option{
     background-color: #fff;
@@ -377,30 +403,31 @@ header {
 
 // The search block
 
-/*********  search block  ********/
-
 #block-search-form{
   padding-top: 9px;
   float: right;
   clear: left;
+  .container-inline{
+    position: relative;
+  }
   label{
     font-size: 14px;
     font-weight: normal;
-    right: 47px;
     z-index: 200;
     margin-right: -39px;
     padding-top: 1px;
+    padding-left: 5px;
   }
   .form-item{
     position: relative;
-    left: -16px;
     margin: 0;
+    float: right;
   }
   input.form-text{
     border: 1px solid #000;
     box-shadow: none;
     font-size: 14px;
-    padding-right: 3px;
+    padding-left: 5px;
     padding-top: 2px;
     width: 183px;
     background-color: transparent;
@@ -410,10 +437,9 @@ header {
     background: url("../images/search-icon.png") no-repeat 0 0 transparent;
     border: medium none;
     display: block !important;
-    float: left;
+    right: 0;
+    position: absolute;
     height: 16px;
-    left: 6px;
-    position: relative;
     text-indent: -9999px;
     top: 5px;
     width: 17px;
