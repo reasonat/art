@@ -2224,6 +2224,88 @@ header {
   width: 17px;
 }
 
+/**********  exhibition  ************/
+/* line 454, ../sass/components/_arts.scss */
+ul.jcarousel li {
+  height: 461px !important;
+  width: 368px !important;
+  margin: 0;
+}
+
+@media (min-width: 1200px) {
+  /* line 461, ../sass/components/_arts.scss */
+  .jcarousel-container, .jcarousel-clip {
+    width: 1126px !important;
+  }
+}
+/* line 466, ../sass/components/_arts.scss */
+.jcarousel-skin-default .jcarousel-next,
+.jcarousel-skin-default .jcarousel-next:hover,
+.jcarousel-skin-default .jcarousel-prev,
+.jcarousel-skin-default .jcarousel-prev:hover {
+  height: 24px;
+  width: 17px;
+  bottom: 0;
+  top: auto;
+  background: url("../images/gallery-arrows.png") no-repeat 0 0 transparent;
+}
+
+/* line 477, ../sass/components/_arts.scss */
+.jcarousel-skin-default .jcarousel-next,
+.jcarousel-skin-default .jcarousel-next:hover {
+  right: 34px;
+  background-position: 0 0;
+}
+
+/* line 483, ../sass/components/_arts.scss */
+.jcarousel-skin-default .jcarousel-prev,
+.jcarousel-skin-default .jcarousel-prev:hover {
+  left: auto;
+  right: 4px;
+  background-position: -38px 0;
+}
+
+/* line 490, ../sass/components/_arts.scss */
+.jcarousel-skin-default .jcarousel-next-disabled, .jcarousel-skin-default .jcarousel-prev-disabled {
+  display: block;
+  opacity: 0.2;
+}
+
+/* line 496, ../sass/components/_arts.scss */
+.jcarousel-skin-default .jcarousel-item {
+  border: none;
+  height: 461px !important;
+  background-color: transparent;
+}
+
+/* line 502, ../sass/components/_arts.scss */
+.jcarousel-skin-default .jcarousel-container-horizontal {
+  height: auto;
+  padding: 0;
+}
+
+/* line 508, ../sass/components/_arts.scss */
+#block-views-exhibition-gallery-block-2 ul.jcarousel li {
+  height: 461px !important;
+  width: 1280px !important;
+  margin: 0;
+}
+/* line 513, ../sass/components/_arts.scss */
+#block-views-exhibition-gallery-block-2 img {
+  float: right;
+  margin-right: 4px;
+}
+/* line 517, ../sass/components/_arts.scss */
+#block-views-exhibition-gallery-block-2 .jcarousel-container, #block-views-exhibition-gallery-block-2 .jcarousel-clip, #block-views-exhibition-gallery-block-2 li {
+  width: 100% !important;
+}
+@media (max-width: 1199px) {
+  /* line 521, ../sass/components/_arts.scss */
+  #block-views-exhibition-gallery-block-2 .jcarousel-container, #block-views-exhibition-gallery-block-2 .jcarousel-clip {
+    width: 752px !important;
+  }
+}
+
 /**
  * @file
  * Print styling
