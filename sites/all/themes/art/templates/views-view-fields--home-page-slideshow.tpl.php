@@ -40,4 +40,4 @@ preg_match('/\< *[img][^\>]*[src] *= *[\"\']{0,1}([^\"\']*)/i', $fields['field_a
 </div>
 </a>
 
-	<div class="slide" style="background:  url('<?php print $matches[1]; ?>') no-repeat center center fixed;"></div>
+	<div class="slide" style="background:  url('<?php print $matches[1]; ?>') no-repeat center 0 fixed;"></div>
