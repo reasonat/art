@@ -446,3 +446,80 @@ header {
   }
   
 }
+
+/**********  exhibition  ************/
+
+// jcarousel
+
+ ul.jcarousel li{
+    height: 461px !important;
+    width: 368px !important;
+    margin:0;
+  }
+
+@media (min-width: 1200px){
+  .jcarousel-container, .jcarousel-clip{
+    width:1126px!important;
+  }
+}
+
+  .jcarousel-skin-default .jcarousel-next,
+  .jcarousel-skin-default .jcarousel-next:hover,
+    .jcarousel-skin-default .jcarousel-prev,
+  .jcarousel-skin-default .jcarousel-prev:hover{
+    height: 24px;
+    width: 17px;
+    bottom: 0;
+    top: auto;
+    background: url("../images/gallery-arrows.png") no-repeat 0 0 transparent;
+  }
+
+  .jcarousel-skin-default .jcarousel-next,
+  .jcarousel-skin-default .jcarousel-next:hover{
+    right: 34px;
+    background-position: 0 0;
+  }
+
+  .jcarousel-skin-default .jcarousel-prev,
+  .jcarousel-skin-default .jcarousel-prev:hover {
+    left: auto;
+    right: 4px;
+    background-position: -38px 0;
+}
+
+.jcarousel-skin-default .jcarousel-next-disabled, .jcarousel-skin-default .jcarousel-prev-disabled{
+  display: block;
+  opacity: 0.2;
+}
+
+
+.jcarousel-skin-default .jcarousel-item{
+  border:none;
+  height: 461px!important;
+  background-color: transparent;
+}
+
+.jcarousel-skin-default .jcarousel-container-horizontal{
+  height: auto;
+  padding: 0;
+}
+
+#block-views-exhibition-gallery-block-2{
+ ul.jcarousel li{
+    height: 461px !important;
+    width: 1280px !important;
+    margin:0;
+  }  
+  img{
+    float: right;
+    margin-right: 4px;
+  }
+  .jcarousel-container, .jcarousel-clip, li{
+    width: 100%!important;
+  }
+  @media (max-width: 1199px){
+    .jcarousel-container, .jcarousel-clip{
+      width:752px!important;
+    }
+  }
+}
