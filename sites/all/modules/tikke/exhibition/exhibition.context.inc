@@ -22,7 +22,7 @@ function exhibition_context_default_contexts() {
         'exhibition' => 'exhibition',
       ),
       'options' => array(
-        'node_form' => '1',
+        'node_form' => '0',
       ),
     ),
   );
@@ -32,8 +32,14 @@ function exhibition_context_default_contexts() {
         'views-exhibition_gallery-block' => array(
           'module' => 'views',
           'delta' => 'exhibition_gallery-block',
-          'region' => 'content',
+          'region' => 'content-top',
           'weight' => '-10',
+        ),
+        'views-exhibition_gallery-block_2' => array(
+          'module' => 'views',
+          'delta' => 'exhibition_gallery-block_2',
+          'region' => 'content-top',
+          'weight' => '-9',
         ),
         'views-exhibition_gallery-block_1' => array(
           'module' => 'views',

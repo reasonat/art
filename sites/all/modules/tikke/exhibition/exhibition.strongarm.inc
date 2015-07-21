@@ -63,7 +63,7 @@ function exhibition_strongarm() {
       'display' => array(
         'language' => array(
           'default' => array(
-            'weight' => '10',
+            'weight' => '14',
             'visible' => FALSE,
           ),
         ),

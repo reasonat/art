@@ -25,7 +25,7 @@ function exhibition_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 13,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -59,10 +59,9 @@ function exhibition_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 15,
+        'type' => 'hidden',
+        'weight' => 17,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -105,7 +104,7 @@ function exhibition_field_default_field_instances() {
           'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
-        'weight' => 13,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -130,7 +129,7 @@ function exhibition_field_default_field_instances() {
       'module' => 'date',
       'settings' => array(
         'increment' => 15,
-        'input_format' => 'Y-m-d H:i:s',
+        'input_format' => 'd/m/Y - H:i:s',
         'input_format_custom' => '',
         'label_position' => 'above',
         'repeat_collapsed' => 0,
@@ -200,7 +199,7 @@ function exhibition_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -346,7 +345,7 @@ function exhibition_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 7,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -419,7 +418,7 @@ function exhibition_field_default_field_instances() {
       'module' => 'date',
       'settings' => array(
         'increment' => 15,
-        'input_format' => 'Y-m-d H:i:s',
+        'input_format' => 'd/m/Y - H:i:s',
         'input_format_custom' => '',
         'label_position' => 'above',
         'repeat_collapsed' => 0,
@@ -449,7 +448,7 @@ function exhibition_field_default_field_instances() {
           'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
-        'weight' => 16,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -474,7 +473,7 @@ function exhibition_field_default_field_instances() {
       'module' => 'date',
       'settings' => array(
         'increment' => 15,
-        'input_format' => 'Y-m-d H:i:s',
+        'input_format' => 'd/m/Y - H:i:s',
         'input_format_custom' => '',
         'label_position' => 'above',
         'repeat_collapsed' => 0,
@@ -504,7 +503,7 @@ function exhibition_field_default_field_instances() {
           'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
-        'weight' => 12,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -529,7 +528,7 @@ function exhibition_field_default_field_instances() {
       'module' => 'date',
       'settings' => array(
         'increment' => 15,
-        'input_format' => 'Y-m-d H:i:s',
+        'input_format' => 'd/m/Y - H:i:s',
         'input_format_custom' => '',
         'label_position' => 'above',
         'repeat_collapsed' => 0,
@@ -559,7 +558,7 @@ function exhibition_field_default_field_instances() {
           'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
-        'weight' => 17,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -584,7 +583,7 @@ function exhibition_field_default_field_instances() {
       'module' => 'date',
       'settings' => array(
         'increment' => 15,
-        'input_format' => 'Y-m-d H:i:s',
+        'input_format' => 'd/m/Y - H:i:s',
         'input_format_custom' => '',
         'label_position' => 'above',
         'repeat_collapsed' => 0,
@@ -605,10 +604,9 @@ function exhibition_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 14,
+        'type' => 'hidden',
+        'weight' => 16,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -686,7 +684,7 @@ function exhibition_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 15,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -828,7 +826,7 @@ function exhibition_field_default_field_instances() {
           'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
-        'weight' => 18,
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -853,7 +851,7 @@ function exhibition_field_default_field_instances() {
       'module' => 'date',
       'settings' => array(
         'increment' => 15,
-        'input_format' => 'Y-m-d H:i:s',
+        'input_format' => 'd/m/Y - H:i:s',
         'input_format_custom' => '',
         'label_position' => 'above',
         'repeat_collapsed' => 0,

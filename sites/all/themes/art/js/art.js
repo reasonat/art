@@ -19,6 +19,7 @@ Drupal.behaviors.my_custom_behavior = {
 
 $height = $(window).height()-138;
 $width = ($(window).width()-1200)/2+276;
+$jcaruselwidth = $(window).width()*0.94/3;
 
 $(".menu-button").click(function(){
   if ($("#main-menu").hasClass("hide")){
@@ -43,6 +44,19 @@ $(".menu-button").click(function(){
 
 $("#block-search-form .form-type-textfield label").removeClass("element-invisible");
 
+if ($("body").hasClass("node-type-exhibition")){
+    $("ul.jcarousel li").css("width", $jcaruselwidth); 
+
+    $(".view-exhibition-gallery .grid").click(function(){
+      $("#block-views-exhibition-gallery-block .view").addClass("display").removeClass("hide");
+      $("#block-views-exhibition-gallery-block-2 .view").addClass("hide").removeClass("display");
+    });
+
+    $(".view-exhibition-gallery .one").click(function(){
+      $("#block-views-exhibition-gallery-block-2 .view").addClass("display").removeClass("hide");
+      $("#block-views-exhibition-gallery-block .view").addClass("hide").removeClass("display");
+    });
+}
 
   }
 };

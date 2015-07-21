@@ -2220,40 +2220,85 @@ header {
   width: 17px;
 }
 
-/**********  exhibition  ************/
-/* line 454, ../sass/components/_arts.scss */
-ul.jcarousel li {
-  height: 461px !important;
+/**********  exhibition page ************/
+/* line 453, ../sass/components/_arts.scss */
+.node-type-exhibition #wrapper-title {
+  margin: 0 auto;
+  text-align: center;
+}
+/* line 456, ../sass/components/_arts.scss */
+.node-type-exhibition #wrapper-title #page-title {
+  font-family: 'almoni-900', arial;
+  border-left: 1px solid;
+  font-size: 1.3em;
+  font-weight: normal;
+  line-height: 0.8em;
+  margin-left: 7px;
+  padding-left: 11px;
+  display: inline-block;
+}
+/* line 466, ../sass/components/_arts.scss */
+.node-type-exhibition #wrapper-title .sub-title {
+  font-size: 1.3em;
+  display: inline;
+}
+/* line 471, ../sass/components/_arts.scss */
+.node-type-exhibition .field {
+  text-align: center;
+}
+/* line 474, ../sass/components/_arts.scss */
+.node-type-exhibition .field-name-field-campus {
+  margin-top: 33px;
+}
+/* line 476, ../sass/components/_arts.scss */
+.node-type-exhibition .field-name-field-campus:before {
+  border-top: 1px solid;
+  content: "";
+  display: block;
+  margin: 0 auto;
+  padding-top: 17px;
+  width: 42px;
+}
+/* line 485, ../sass/components/_arts.scss */
+.node-type-exhibition .field-name-field-text {
+  max-width: 877px;
+  margin: 0 auto;
+}
+
+/**********  exhibition gallery************/
+/* line 495, ../sass/components/_arts.scss */
+#block-views-exhibition-gallery-block ul.jcarousel li {
+  height: 421px !important;
   width: 368px !important;
   margin: 0;
 }
-
 @media (min-width: 1200px) {
-  /* line 461, ../sass/components/_arts.scss */
-  .jcarousel-container, .jcarousel-clip {
-    width: 1126px !important;
+  /* line 501, ../sass/components/_arts.scss */
+  #block-views-exhibition-gallery-block .jcarousel-container, #block-views-exhibition-gallery-block .jcarousel-clip {
+    width: 1105px !important;
   }
 }
-/* line 466, ../sass/components/_arts.scss */
+
+/* line 508, ../sass/components/_arts.scss */
 .jcarousel-skin-default .jcarousel-next,
 .jcarousel-skin-default .jcarousel-next:hover,
 .jcarousel-skin-default .jcarousel-prev,
 .jcarousel-skin-default .jcarousel-prev:hover {
   height: 24px;
   width: 17px;
-  bottom: 0;
+  bottom: -28px;
   top: auto;
   background: url("../images/gallery-arrows.png") no-repeat 0 0 transparent;
 }
 
-/* line 477, ../sass/components/_arts.scss */
+/* line 519, ../sass/components/_arts.scss */
 .jcarousel-skin-default .jcarousel-next,
 .jcarousel-skin-default .jcarousel-next:hover {
   right: 34px;
   background-position: 0 0;
 }
 
-/* line 483, ../sass/components/_arts.scss */
+/* line 525, ../sass/components/_arts.scss */
 .jcarousel-skin-default .jcarousel-prev,
 .jcarousel-skin-default .jcarousel-prev:hover {
   left: auto;
@@ -2261,45 +2306,105 @@ ul.jcarousel li {
   background-position: -38px 0;
 }
 
-/* line 490, ../sass/components/_arts.scss */
+/* line 532, ../sass/components/_arts.scss */
 .jcarousel-skin-default .jcarousel-next-disabled, .jcarousel-skin-default .jcarousel-prev-disabled {
   display: block;
   opacity: 0.2;
 }
 
-/* line 496, ../sass/components/_arts.scss */
+/* line 538, ../sass/components/_arts.scss */
 .jcarousel-skin-default .jcarousel-item {
   border: none;
   height: 461px !important;
   background-color: transparent;
 }
 
-/* line 502, ../sass/components/_arts.scss */
+/* line 544, ../sass/components/_arts.scss */
 .jcarousel-skin-default .jcarousel-container-horizontal {
   height: auto;
   padding: 0;
 }
 
-/* line 508, ../sass/components/_arts.scss */
+/* line 549, ../sass/components/_arts.scss */
+#block-views-exhibition-gallery-block-2 {
+  /*
+  .views-slideshow-cycle-main-frame{
+    width: 100%!important;
+  }
+  .views-slideshow-cycle-main-frame-row{
+    width: 100%;
+    img{
+      margin: 0 auto;
+      display: block;
+    }
+  }
+  .views-slideshow-controls-bottom{
+    .views-slideshow-controls-text-pause{
+      display: none!important;
+    }
+    #views_slideshow_controls_text_exhibition_gallery-block_2{
+      span{
+        height: 24px;
+        width: 17px;
+        background: url("../images/gallery-arrows.png") no-repeat 0 0 transparent;
+        text-indent: -9999px;
+        display: inline-block;
+        position: relative;
+      }
+    }
+    .views-slideshow-controls-text-previous{
+      right: 4px;
+      background-position: -38px 0!important;
+    }
+    .views-slideshow-controls-text-next{
+      right: 16px;
+      background-position: 0 0;
+    }
+  }*/
+}
+/* line 550, ../sass/components/_arts.scss */
 #block-views-exhibition-gallery-block-2 ul.jcarousel li {
-  height: 461px !important;
-  width: 1280px !important;
+  height: 421px !important;
+  width: 1119px !important;
   margin: 0;
 }
-/* line 513, ../sass/components/_arts.scss */
-#block-views-exhibition-gallery-block-2 img {
-  float: right;
-  margin-right: 4px;
-}
-/* line 517, ../sass/components/_arts.scss */
-#block-views-exhibition-gallery-block-2 .jcarousel-container, #block-views-exhibition-gallery-block-2 .jcarousel-clip, #block-views-exhibition-gallery-block-2 li {
-  width: 100% !important;
-}
-@media (max-width: 1199px) {
-  /* line 521, ../sass/components/_arts.scss */
+@media (min-width: 1200px) {
+  /* line 556, ../sass/components/_arts.scss */
   #block-views-exhibition-gallery-block-2 .jcarousel-container, #block-views-exhibition-gallery-block-2 .jcarousel-clip {
-    width: 752px !important;
+    width: 1119px !important;
   }
+}
+
+/* line 596, ../sass/components/_arts.scss */
+#block-views-exhibition-gallery-block-2, #block-views-exhibition-gallery-block {
+  margin-bottom: 37px;
+}
+/* line 598, ../sass/components/_arts.scss */
+#block-views-exhibition-gallery-block-2 .view-footer, #block-views-exhibition-gallery-block .view-footer {
+  float: left;
+  margin-top: 6px;
+  margin-left: 9px;
+}
+/* line 602, ../sass/components/_arts.scss */
+#block-views-exhibition-gallery-block-2 .view-footer p, #block-views-exhibition-gallery-block .view-footer p {
+  margin: 0;
+}
+/* line 605, ../sass/components/_arts.scss */
+#block-views-exhibition-gallery-block-2 .view-footer div, #block-views-exhibition-gallery-block .view-footer div {
+  float: left;
+  cursor: pointer;
+  background: url("../images/grid_on.png") no-repeat 0 0 transparent;
+  width: 21px;
+  height: 21px;
+  margin-right: 5px;
+}
+/* line 613, ../sass/components/_arts.scss */
+#block-views-exhibition-gallery-block-2 .view-footer .one, #block-views-exhibition-gallery-block .view-footer .one {
+  background-position: -25px 0;
+}
+/* line 617, ../sass/components/_arts.scss */
+#block-views-exhibition-gallery-block-2 .hide.view, #block-views-exhibition-gallery-block .hide.view {
+  display: none;
 }
 
 /**
