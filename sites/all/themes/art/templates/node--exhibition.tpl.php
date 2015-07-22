@@ -35,6 +35,7 @@
     hide($content['comments']);
     hide($content['links']);
   ?>
+  <?php print render($content['field_copyright']); ?>
 
   <?php print render($content['field_campus']); ?>
   <?php print render($content['field_exh_location']); ?>
@@ -43,31 +44,36 @@
     <?php print render($content['field_designers']); ?>
   </div>
   <div class="dates">
+    <div class="open">
     <?php if (render($content['field_exh_open_date'])){?>
-      <div class="label"><?php print t("Opening Date");?></div>
+      <div class="label"><?php print t("Opening Date:");?></div>
       <?php print render($content['field_exh_open_date']); 
     } else if (render($content['field_month_date'])){?>
-          <div class="label"><?php print t("Opening Date");?></div>
+          <div class="label"><?php print t("Opening Date:");?></div>
           <?php print render($content['field_month_date']); 
     } else if (render($content['field_date_year'])){?>
-          <div class="label"><?php print t("Opening Date");?></div>
+          <div class="label"><?php print t("Opening Date:");?></div>
           <?php print render($content['field_date_year']); 
-    } 
-
+    }?> 
+    </div> 
+    <div class="close"><?php
   if (render($content['field_full_date_2'])){?>
-      <div class="label"><?php print t("Closing Date");?></div>
+      <div class="label"><?php print t("Closing Date:");?></div>
       <?php print render($content['field_full_date_2']); 
   } else if (render($content['field_month_date_2'])){?>
-        <div class="label"><?php print t("Closing Date");?></div>
+        <div class="label"><?php print t("Closing Date:");?></div>
         <?php print render($content['field_month_date_2']); 
     }
     else if (render($content['field_year_date_2'])){?>
-        <div class="label"><?php print t("Closing Date");?></div>
+        <div class="label"><?php print t("Closing Date:");?></div>
         <?php print render($content['field_year_date_2']); 
     }?>
+    </div>
   </div>
 
   <?php print render($content['field_text']); ?>
+
+  <?php print render($content['flippy_pager']);?> 
 
   <?php print render($content['links']); ?>
 
