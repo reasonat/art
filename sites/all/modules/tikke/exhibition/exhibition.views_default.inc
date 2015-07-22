@@ -30,7 +30,15 @@ function exhibition_views_default_views() {
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'איתחול';
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '8';
-  $handler->display->display_options['style_plugin'] = 'grid';
+  $handler->display->display_options['style_plugin'] = 'jcarousel';
+  $handler->display->display_options['style_options']['wrap'] = '0';
+  $handler->display->display_options['style_options']['visible'] = '3';
+  $handler->display->display_options['style_options']['responsive'] = 1;
+  $handler->display->display_options['style_options']['scroll'] = '3';
+  $handler->display->display_options['style_options']['auto'] = '0';
+  $handler->display->display_options['style_options']['autoPause'] = 1;
+  $handler->display->display_options['style_options']['easing'] = '';
+  $handler->display->display_options['style_options']['vertical'] = 0;
   $handler->display->display_options['row_plugin'] = 'fields';
   /* שדה: תוכן: גלריית תערוכה - אזור עליון */
   $handler->display->display_options['fields']['field_exh_gallery_top']['id'] = 'field_exh_gallery_top';
@@ -84,8 +92,24 @@ function exhibition_views_default_views() {
     'exhibition' => 'exhibition',
   );
 
-  /* Display: Top gallery */
-  $handler = $view->new_display('block', 'Top gallery', 'block');
+  /* Display: Top gallery-3 */
+  $handler = $view->new_display('block', 'Top gallery-3', 'block');
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'jcarousel';
+  $handler->display->display_options['style_options']['wrap'] = '0';
+  $handler->display->display_options['style_options']['visible'] = '3';
+  $handler->display->display_options['style_options']['responsive'] = 1;
+  $handler->display->display_options['style_options']['auto'] = '0';
+  $handler->display->display_options['style_options']['autoPause'] = 1;
+  $handler->display->display_options['style_options']['easing'] = '';
+  $handler->display->display_options['style_options']['vertical'] = 0;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* שדה: תוכן: גלריית תערוכה - אזור עליון */
   $handler->display->display_options['fields']['field_exh_gallery_top']['id'] = 'field_exh_gallery_top';
@@ -95,24 +119,12 @@ function exhibition_views_default_views() {
   $handler->display->display_options['fields']['field_exh_gallery_top']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_exh_gallery_top']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_exh_gallery_top']['settings'] = array(
-    'image_style' => 'medium',
+    'image_style' => 'exhibition-gallery-3',
     'image_link' => 'content',
   );
-  /* שדה: Image title */
-  $handler->display->display_options['fields']['field_exh_gallery_top_1']['id'] = 'field_exh_gallery_top_1';
-  $handler->display->display_options['fields']['field_exh_gallery_top_1']['table'] = 'field_data_field_exh_gallery_top';
-  $handler->display->display_options['fields']['field_exh_gallery_top_1']['field'] = 'field_exh_gallery_top';
-  $handler->display->display_options['fields']['field_exh_gallery_top_1']['ui_name'] = 'Image title';
-  $handler->display->display_options['fields']['field_exh_gallery_top_1']['label'] = '';
-  $handler->display->display_options['fields']['field_exh_gallery_top_1']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_exh_gallery_top_1']['alter']['text'] = '[field_exh_gallery_top_1-title]';
-  $handler->display->display_options['fields']['field_exh_gallery_top_1']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_exh_gallery_top_1']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_exh_gallery_top_1']['settings'] = array(
-    'image_style' => 'medium',
-    'image_link' => 'content',
-  );
-  $handler->display->display_options['block_description'] = 'Exhibition - Top gallery';
+  $handler->display->display_options['fields']['field_exh_gallery_top']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_exh_gallery_top']['delta_offset'] = '0';
+  $handler->display->display_options['block_description'] = 'Exhibition - Top gallery -3';
 
   /* Display: bottom_gallery */
   $handler = $view->new_display('block', 'bottom_gallery', 'block_1');
@@ -144,6 +156,72 @@ function exhibition_views_default_views() {
     'image_link' => 'content',
   );
   $handler->display->display_options['block_description'] = 'Exhibition - Botoom gallery';
+
+  /* Display: Top gallery-1 */
+  $handler = $view->new_display('block', 'Top gallery-1', 'block_2');
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'slideshow';
+  $handler->display->display_options['style_options']['slideshow_type'] = 'views_slideshow_cycle';
+  $handler->display->display_options['style_options']['slideshow_skin'] = 'default';
+  $handler->display->display_options['style_options']['skin_info'] = array(
+    'class' => 'default',
+    'name' => 'ברירת מחדל',
+    'module' => 'views_slideshow',
+    'path' => '',
+    'stylesheets' => array(),
+  );
+  $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_pager']['weight'] = '1';
+  $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_pager']['type'] = 'views_slideshow_pager_fields';
+  $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_pager']['views_slideshow_pager_fields_fields'] = array(
+    'field_exh_gallery_top' => 0,
+  );
+  $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_controls']['weight'] = '1';
+  $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_controls']['type'] = 'views_slideshow_controls_text';
+  $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_slide_counter']['weight'] = '1';
+  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['weight'] = '1';
+  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['type'] = 'views_slideshow_pager_fields';
+  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['views_slideshow_pager_fields_fields'] = array(
+    'field_exh_gallery_top' => 0,
+  );
+  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_controls']['enable'] = 1;
+  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_controls']['weight'] = '1';
+  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_controls']['type'] = 'views_slideshow_controls_text';
+  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_slide_counter']['weight'] = '1';
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['effect'] = 'scrollHorz';
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['transition_advanced'] = 1;
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['timeout'] = '0';
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['speed'] = '700';
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['delay'] = '0';
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['action_advanced'] = 1;
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['start_paused'] = 0;
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['remember_slide_days'] = '1';
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['nowrap'] = 1;
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['items_per_slide'] = '1';
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['wait_for_image_load_timeout'] = '3000';
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['cleartype'] = 0;
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['cleartypenobg'] = 0;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* שדה: תוכן: גלריית תערוכה - אזור עליון */
+  $handler->display->display_options['fields']['field_exh_gallery_top']['id'] = 'field_exh_gallery_top';
+  $handler->display->display_options['fields']['field_exh_gallery_top']['table'] = 'field_data_field_exh_gallery_top';
+  $handler->display->display_options['fields']['field_exh_gallery_top']['field'] = 'field_exh_gallery_top';
+  $handler->display->display_options['fields']['field_exh_gallery_top']['label'] = '';
+  $handler->display->display_options['fields']['field_exh_gallery_top']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_exh_gallery_top']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_exh_gallery_top']['settings'] = array(
+    'image_style' => 'exhibition-gallery-1',
+    'image_link' => 'content',
+  );
+  $handler->display->display_options['fields']['field_exh_gallery_top']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_exh_gallery_top']['delta_offset'] = '0';
+  $handler->display->display_options['block_description'] = 'Exhibition - Top gallery -1';
   $translatables['exhibition_gallery'] = array(
     t('Master'),
     t('more'),
@@ -153,12 +231,13 @@ function exhibition_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('הכל'),
-    t('Top gallery'),
-    t('[field_exh_gallery_top_1-title]'),
-    t('Exhibition - Top gallery'),
+    t('Top gallery-3'),
+    t('Exhibition - Top gallery -3'),
     t('bottom_gallery'),
     t('[field_exh_gallery_bottom_1-title]'),
     t('Exhibition - Botoom gallery'),
+    t('Top gallery-1'),
+    t('Exhibition - Top gallery -1'),
   );
   $export['exhibition_gallery'] = $view;
 

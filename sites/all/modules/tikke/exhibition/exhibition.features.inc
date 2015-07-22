@@ -27,6 +27,45 @@ function exhibition_views_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_image_default_styles().
+ */
+function exhibition_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: exhibition-gallery-1.
+  $styles['exhibition-gallery-1'] = array(
+    'label' => 'exhibition-gallery-1',
+    'effects' => array(
+      6 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 1119,
+          'height' => 421,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: exhibition-gallery-3.
+  $styles['exhibition-gallery-3'] = array(
+    'label' => 'exhibition-gallery-3',
+    'effects' => array(
+      5 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 366,
+          'height' => 421,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  return $styles;
+}
+
+/**
  * Implements hook_node_info().
  */
 function exhibition_node_info() {
