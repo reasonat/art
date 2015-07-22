@@ -454,7 +454,7 @@ header {
     direction: ltr;
   }
   #wrapper-title{
-    margin: 0 auto;
+    margin: 5px auto 0;
     text-align: center;
     #page-title{
       font-family:'almoni-900', arial;
@@ -489,10 +489,115 @@ header {
     max-width: 877px;
     margin: 0 auto;
   }
+  .treasurers-designers{
+    text-align: center;
+    margin: 10px auto 0;
+    line-height: 0.8em;
+    height: 23px;
+    .field{
+      display: inline-block;
+    }
+    .field-name-field-treasurers-name{
+      border-left: 1px solid;
+      margin-left: 7px;
+      padding-left: 11px;
+    }
+    .field-name-field-designers{
+      .field-item{
+        float: right;
+        margin-left: 5px;
+      }
+    }
+  }
+  .dates{
+    line-height: 0.8em;
+    clear: none;
+    text-align: center;
+    .close, .open{
+      display: inline-block;
+    }
+    .open{
+      border-left: 1px solid;
+      margin-left: 7px;
+      padding-left: 11px;
+    }
+    .label{
+      font-weight: bold;
+      float: right;
+      margin-left: 5px;
+    }
+    .field{
+      float: right;
+    }
+  }
+  ul.flippy{
+    padding: 0;
+    text-align: center;
+    font-family:'almoni-900';
+    a{
+      color: #fdfdfd;
+      background-color: $green;
+      padding: 5px 10px;
+    }
+  }
+  .field-name-field-copyright{
+    .field-item{
+      display: inline;
+    }
+  }
 }
+
+#block-views-also-intersting-block{
+  max-width: 715px;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  margin: 13px auto;
+  h2{
+      font-family:'almoni-900';
+      font-size: 1.17em;
+      color: $green;
+      text-align: center;
+      margin-top: 17px;
+
+  }
+  .view-content{
+    display: block;
+    text-align: center;
+    margin-top: 14px;
+    margin-bottom: 43px;
+  }
+  .views-field-title{
+    opacity: 0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    a{
+      padding: 27% 0;
+      position: absolute;
+      width: 100%;
+      display: block;
+      font-family:'almoni-900';
+      font-size: 1.17em;
+      color: #fff;
+    }
+  }
+  .views-row{
+    display: inline-block;
+    position: relative;
+    &:hover{
+      .views-field-title{
+        opacity: 1;
+        a{
+          background-color:  rgba(83, 83, 83, 0.79);
+        }
+      }
+    }
+  }
+}
+
 /**********  exhibition gallery************/
 
 #block-views-exhibition-gallery-block-2, #block-views-exhibition-gallery-block{
+  margin-bottom: 43px;
   .view-footer{
     float: left;
     margin-top: 6px;
@@ -514,5 +619,25 @@ header {
   }
   .hide.view{
     display: none;
+  }
+  .owl-controls{
+    .owl-next, .owl-prev{
+      height: 24px;
+      width: 17px;
+      background: url("../images/gallery-arrows.png") no-repeat 0 0 transparent;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      right: 0;
+    }
+    .owl-next{
+      right: 30px;
+      background-position: 0 0;   
+      position: absolute;  
+    }
+    .owl-prev{
+      right: 0px;
+      background-position: -38px 0;   
+    }
   }
 }
