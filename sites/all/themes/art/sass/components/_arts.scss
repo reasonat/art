@@ -447,79 +447,72 @@ header {
   
 }
 
-/**********  exhibition  ************/
+/**********  exhibition page ************/
 
-// jcarousel
-
- ul.jcarousel li{
-    height: 461px !important;
-    width: 368px !important;
-    margin:0;
+.node-type-exhibition{
+  .region-content-top{
+    direction: ltr;
   }
-
-@media (min-width: 1200px){
-  .jcarousel-container, .jcarousel-clip{
-    width:1126px!important;
-  }
-}
-
-  .jcarousel-skin-default .jcarousel-next,
-  .jcarousel-skin-default .jcarousel-next:hover,
-    .jcarousel-skin-default .jcarousel-prev,
-  .jcarousel-skin-default .jcarousel-prev:hover{
-    height: 24px;
-    width: 17px;
-    bottom: 0;
-    top: auto;
-    background: url("../images/gallery-arrows.png") no-repeat 0 0 transparent;
-  }
-
-  .jcarousel-skin-default .jcarousel-next,
-  .jcarousel-skin-default .jcarousel-next:hover{
-    right: 34px;
-    background-position: 0 0;
-  }
-
-  .jcarousel-skin-default .jcarousel-prev,
-  .jcarousel-skin-default .jcarousel-prev:hover {
-    left: auto;
-    right: 4px;
-    background-position: -38px 0;
-}
-
-.jcarousel-skin-default .jcarousel-next-disabled, .jcarousel-skin-default .jcarousel-prev-disabled{
-  display: block;
-  opacity: 0.2;
-}
-
-
-.jcarousel-skin-default .jcarousel-item{
-  border:none;
-  height: 461px!important;
-  background-color: transparent;
-}
-
-.jcarousel-skin-default .jcarousel-container-horizontal{
-  height: auto;
-  padding: 0;
-}
-
-#block-views-exhibition-gallery-block-2{
- ul.jcarousel li{
-    height: 461px !important;
-    width: 1280px !important;
-    margin:0;
-  }  
-  img{
-    float: right;
-    margin-right: 4px;
-  }
-  .jcarousel-container, .jcarousel-clip, li{
-    width: 100%!important;
-  }
-  @media (max-width: 1199px){
-    .jcarousel-container, .jcarousel-clip{
-      width:752px!important;
+  #wrapper-title{
+    margin: 0 auto;
+    text-align: center;
+    #page-title{
+      font-family:'almoni-900', arial;
+      border-left: 1px solid;
+      font-size: 1.3em;
+      font-weight: normal;
+      line-height: 0.8em;
+      margin-left: 7px;
+      padding-left: 11px;
+      display: inline-block;
+    }  
+    .sub-title{
+      font-size: 1.3em;
+      display: inline;
     }
+  }
+  .field{
+    text-align: center;
+  }
+  .field-name-field-campus{
+    margin-top: 33px;
+    &:before{
+      border-top: 1px solid;
+      content: "";
+      display: block;
+      margin: 0 auto;
+      padding-top: 17px;
+      width: 42px;
+    }
+  }
+  .field-name-field-text{
+    max-width: 877px;
+    margin: 0 auto;
+  }
+}
+/**********  exhibition gallery************/
+
+#block-views-exhibition-gallery-block-2, #block-views-exhibition-gallery-block{
+  .view-footer{
+    float: left;
+    margin-top: 6px;
+    margin-left: 9px;
+    p{
+      margin: 0;
+    }
+    div{
+      float: left;
+      cursor: pointer;
+      background: url("../images/grid_on.png") no-repeat 0 0 transparent;
+      width: 21px;
+      height: 21px;
+      margin-right: 5px;
+    }
+    .one{
+      background-position: -25px 0;
+    }
+  }
+  .hide.view{
+    display: none;
   }
 }
