@@ -8,8 +8,11 @@ dependencies[] = features
 dependencies[] = field_group
 dependencies[] = jcarousel
 dependencies[] = node
+<<<<<<< HEAD
 dependencies[] = owlcarousel_views
 dependencies[] = taxonomy
+=======
+>>>>>>> 00d92da6192f9f5667f6b659b0cbf226671556f6
 dependencies[] = views_slideshow
 features[context][] = exhibition_blocks
 features[ctools][] = context:context:3

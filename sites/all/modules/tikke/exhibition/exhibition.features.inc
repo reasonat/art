@@ -36,6 +36,7 @@ function exhibition_image_default_styles() {
   $styles['exhibition-gallery-1'] = array(
     'label' => 'exhibition-gallery-1',
     'effects' => array(
+<<<<<<< HEAD
       7 => array(
         'name' => 'image_scale',
         'data' => array(
@@ -44,6 +45,15 @@ function exhibition_image_default_styles() {
           'upscale' => 0,
         ),
         'weight' => 2,
+=======
+      6 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 1119,
+          'height' => 421,
+        ),
+        'weight' => 1,
+>>>>>>> 00d92da6192f9f5667f6b659b0cbf226671556f6
       ),
     ),
   );

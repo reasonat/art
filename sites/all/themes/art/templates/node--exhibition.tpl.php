@@ -35,6 +35,10 @@
     hide($content['comments']);
     hide($content['links']);
   ?>
+<<<<<<< HEAD
+=======
+  <?php print render($content['field_copyright']); ?>
+>>>>>>> 00d92da6192f9f5667f6b659b0cbf226671556f6
 
   <?php print render($content['field_campus']); ?>
   <?php print render($content['field_exh_location']); ?>
@@ -43,6 +47,7 @@
     <?php print render($content['field_designers']); ?>
   </div>
   <div class="dates">
+<<<<<<< HEAD
     <?php if (render($content['field_exh_open_date'])){?>
       <div class="label"><?php print t("Opening Date");?></div>
       <?php print render($content['field_exh_open_date']); 
@@ -65,10 +70,42 @@
         <div class="label"><?php print t("Closing Date");?></div>
         <?php print render($content['field_year_date_2']); 
     }?>
+=======
+    <div class="open">
+    <?php if (render($content['field_exh_open_date'])){?>
+      <div class="label"><?php print t("Opening Date:");?></div>
+      <?php print render($content['field_exh_open_date']); 
+    } else if (render($content['field_month_date'])){?>
+          <div class="label"><?php print t("Opening Date:");?></div>
+          <?php print render($content['field_month_date']); 
+    } else if (render($content['field_date_year'])){?>
+          <div class="label"><?php print t("Opening Date:");?></div>
+          <?php print render($content['field_date_year']); 
+    }?> 
+    </div> 
+    <div class="close"><?php
+  if (render($content['field_full_date_2'])){?>
+      <div class="label"><?php print t("Closing Date:");?></div>
+      <?php print render($content['field_full_date_2']); 
+  } else if (render($content['field_month_date_2'])){?>
+        <div class="label"><?php print t("Closing Date:");?></div>
+        <?php print render($content['field_month_date_2']); 
+    }
+    else if (render($content['field_year_date_2'])){?>
+        <div class="label"><?php print t("Closing Date:");?></div>
+        <?php print render($content['field_year_date_2']); 
+    }?>
+    </div>
+>>>>>>> 00d92da6192f9f5667f6b659b0cbf226671556f6
   </div>
 
   <?php print render($content['field_text']); ?>
 
+<<<<<<< HEAD
+=======
+  <?php print render($content['flippy_pager']);?> 
+
+>>>>>>> 00d92da6192f9f5667f6b659b0cbf226671556f6
   <?php print render($content['links']); ?>
 
   <?php print render($content['comments']); ?>

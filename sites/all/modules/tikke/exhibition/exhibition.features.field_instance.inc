@@ -22,6 +22,7 @@ function exhibition_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+<<<<<<< HEAD
         'label' => 'hidden',
         'module' => 'taxonomy',
         'settings' => array(
@@ -29,6 +30,12 @@ function exhibition_field_default_field_instances() {
         ),
         'type' => 'taxonomy_term_reference_plain',
         'weight' => 1,
+=======
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 13,
+>>>>>>> 00d92da6192f9f5667f6b659b0cbf226671556f6
       ),
       'teaser' => array(
         'label' => 'above',
@@ -235,6 +242,81 @@ function exhibition_field_default_field_instances() {
     ),
   );
 
+<<<<<<< HEAD
+=======
+  // Exported field_instance: 'node-exhibition-field_exh_gallery_bottom'
+  $field_instances['node-exhibition-field_exh_gallery_bottom'] = array(
+    'bundle' => 'exhibition',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 12,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_exh_gallery_bottom',
+    'label' => 'גלריית תערוכה לאזור התחתון',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 1,
+      'default_image' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'filefield_paths' => array(
+        'active_updating' => 0,
+        'file_name' => array(
+          'options' => array(
+            'pathauto' => 0,
+            'transliterate' => 0,
+          ),
+          'value' => '[file:ffp-name-only-original].[file:ffp-extension-original]',
+        ),
+        'file_path' => array(
+          'options' => array(
+            'pathauto' => 0,
+            'transliterate' => 0,
+          ),
+          'value' => 'exh-bottom/[node:nid]',
+        ),
+        'retroactive_update' => 0,
+      ),
+      'filefield_paths_enabled' => 1,
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'dragndrop_upload_image',
+      'settings' => array(
+        'allow_replace' => 0,
+        'droppable_area_text' => 'גרירת קבצים לפה',
+        'media_browser' => 0,
+        'multiupload' => 1,
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'bar',
+        'standard_upload' => 1,
+        'upload_button_text' => 'העלאה',
+        'upload_event' => 'auto',
+      ),
+      'type' => 'dragndrop_upload_image',
+      'weight' => 14,
+    ),
+  );
+
+>>>>>>> 00d92da6192f9f5667f6b659b0cbf226671556f6
   // Exported field_instance: 'node-exhibition-field_exh_gallery_top'
   $field_instances['node-exhibition-field_exh_gallery_top'] = array(
     'bundle' => 'exhibition',
@@ -321,7 +403,11 @@ function exhibition_field_default_field_instances() {
           'field_delimiter' => '',
         ),
         'type' => 'text_default',
+<<<<<<< HEAD
         'weight' => 2,
+=======
+        'weight' => 6,
+>>>>>>> 00d92da6192f9f5667f6b659b0cbf226671556f6
       ),
       'teaser' => array(
         'label' => 'above',
