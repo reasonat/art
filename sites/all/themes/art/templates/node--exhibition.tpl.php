@@ -73,6 +73,25 @@
 
   <?php print render($content['field_text']); ?>
 
+<div id="share">
+  <div class="share-title">אהבת? נשמח אם תשתף/י פוסט זה</div>
+  <div class="facebook link">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://newtikke.tikkewebsites.com/node/<?php print $node->nid ?>" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img
+  src="/sites/all/themes/tikke/images/facebook-share.jpg" alt="Share on Facebook"/></a>
+  </div>
+  <div class="google link">
+  <a href="https://plus.google.com/share?url=http://newtikke.tikkewebsites.com/node/<?php print $node->nid ?>" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img
+  src="/sites/all/themes/tikke/images/google-share.jpg" alt="Share on Google+"/></a>
+  </div>
+  <div class="twitter link">
+      <a href="https://twitter.com/home?status=http://newtikke.tikkewebsites.com/node/<?php print $node->nid ?>" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img
+  src="/sites/all/themes/tikke/images/twitter-share.jpg" alt="Share on Twitter"/></a>
+</div>
+</div>  
+
   <?php print render($content['flippy_pager']);?> 
 
   <?php print render($content['links']); ?>
