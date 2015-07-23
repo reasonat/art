@@ -74,22 +74,29 @@
   <?php print render($content['field_text']); ?>
 
 <div id="share">
-  <div class="share-title">אהבת? נשמח אם תשתף/י פוסט זה</div>
-  <div class="facebook link">
-      <a href="https://www.facebook.com/sharer/sharer.php?u=http://newtikke.tikkewebsites.com/node/<?php print $node->nid ?>" onclick="javascript:window.open(this.href,
-  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img
-  src="/sites/all/themes/tikke/images/facebook-share.jpg" alt="Share on Facebook"/></a>
+  <div class="pinterest link">
+    <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());">
+        <img src="/sites/all/themes/art/images/pinterest.png" alt="Pinterest" />
+    </a>
   </div>
-  <div class="google link">
-  <a href="https://plus.google.com/share?url=http://newtikke.tikkewebsites.com/node/<?php print $node->nid ?>" onclick="javascript:window.open(this.href,
+  <div class="facebook link">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://<?php echo $_SERVER['HTTP_HOST'];?>/node/<?php print $node->nid ?>" onclick="javascript:window.open(this.href,
   '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img
-  src="/sites/all/themes/tikke/images/google-share.jpg" alt="Share on Google+"/></a>
+  src="/sites/all/themes/art/images/facebook.png" alt="Share on Facebook"/></a>
   </div>
   <div class="twitter link">
-      <a href="https://twitter.com/home?status=http://newtikke.tikkewebsites.com/node/<?php print $node->nid ?>" onclick="javascript:window.open(this.href,
-  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img
-  src="/sites/all/themes/tikke/images/twitter-share.jpg" alt="Share on Twitter"/></a>
-</div>
+      <a href="https://twitter.com/home?status=http://<?php echo $_SERVER['HTTP_HOST'];?>/node/<?php print $node->nid ?>" onclick="javascript:window.open(this.href,
+      '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img
+      src="/sites/all/themes/art/images/twitter.png" alt="Share on Twitter"/>
+      </a>
+  </div>
+  <div class="mail link">
+    <a href="/forward?path=node/<?php print $node->nid; ?>">
+        <img src="/sites/all/themes/art/images//mail.png" alt="Email" />
+    </a>
+  </div>
+
+
 </div>  
 
   <?php print render($content['flippy_pager']);?> 
